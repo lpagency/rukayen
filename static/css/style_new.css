@@ -24,6 +24,7 @@ font-style: normal;
 
 .bordes{
     border: 1px solid #ddd;
+    text-align: left;
 }
 
 .mas{
