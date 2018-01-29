@@ -1590,16 +1590,16 @@ div.image-upload{
 
     .txt-a-title {
     width: 88%;
-    min-height: 100px;
+    min-height: 100px !important;
     max-height: inherit;
-    height: 140px;
     }
 
     .txt-b-title{
         width: 50%;
         top: -486px;
-        max-height: 232px;
+        max-height: 280px;
         width: 85%;
+        font-size: 18px;
     }
 
     .cumples{
@@ -1611,7 +1611,7 @@ div.image-upload{
     width: 90%;
     left: 11%;
     height: 150px;
-    max-height: 150px;
+    max-height: 112px;
     }
 
     .txt-d-title{
@@ -2122,10 +2122,11 @@ div.image-upload{
 .franja-naranja {
     background-color: #F77603;
     position: relative;
-    width: 117%;
-    margin-left: -30px;
-    top: 70px;
+    width: 131%;
+    /* margin-left: -30px; */
+    top: 156px;
     max-height: 560px;
+    margin-bottom: 100px;
 }
 
 .text_hora{
