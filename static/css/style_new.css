@@ -1589,12 +1589,17 @@ div.image-upload{
     }
 
     .txt-a-title {
-        width: 50%;
-        height: 112px;
+    width: 88%;
+    min-height: 100px;
+    max-height: inherit;
+    height: 140px;
     }
 
     .txt-b-title{
         width: 50%;
+        top: -486px;
+        max-height: 232px;
+        width: 85%;
     }
 
     .cumples{
@@ -1603,15 +1608,15 @@ div.image-upload{
     }
 
     .txt-c-title{
-        width: 50%;
-        left: 50%;
-        height: 131px;
-        max-height: 131px;
+    width: 90%;
+    left: 11%;
+    height: 150px;
+    max-height: 150px;
     }
 
     .txt-d-title{
-        width: 50%;
-        left: 50%;
+    width: 90%;
+    left: 11%;
     }
 
 }
