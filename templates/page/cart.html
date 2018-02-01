@@ -1,13 +1,12 @@
 <script type="text/x-template" id="shopping-cart-product">
 <tr>
 	<td class="vert-align text-left">{{! name }}</td>
-	<td class="vert-align money">{{! price }}</td>
+	<td class="vert-align text-left money">{{! price|money }}</td>
 	<td class="text-center vert-align">
         <a href="#!" class="remove-one" lp-cart-remove-one="{{! id }}">-</a>
             {{! quantity }}
         <a href="#!" class="add-one" lp-cart-add-one="{{! id }}" >+</a>
 	</td>
-	<td class="text-center vert-align"><a class="borrarproducto" cart-id=""><i class="icon-close"></i></a></td>
 </tr>
 </script>
 <script type="text/x-template" id="shopping-cart-total" >
@@ -17,8 +16,7 @@
 </thead>
 <tr>
 	<td>Total:</td>	
-	<td id="total" class="text-right money">{{! total }}</td>
-	<td></td>
+	<td id="total" class="text-right money">{{! total|money }}</td>
 </tr>
 </script>
 <script type="text/x-template" id="shopping-cart-checkout-form" >
@@ -40,7 +38,6 @@
 						<th>Nombre</th>
 						<th>Precio</th>
 						<th class="text-center">Cant</th>
-						<th class="text-right"></th>
 					</tr>
 				</thead>
 				<tbody class="shopping-cart">
