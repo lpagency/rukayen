@@ -2123,15 +2123,13 @@ div.image-upload{
     background-color: #F77603;
     position: relative;
     width: 131%;
-    /* margin-left: -30px; */
-    top: 156px;
+    top: 15px;
     max-height: 560px;
     margin-bottom: 100px;
 }
 
 .text_hora{
     position: relative;
-    top: -150px;
 }
 
 .miki{
