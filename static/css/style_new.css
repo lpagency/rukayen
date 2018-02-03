@@ -6,7 +6,28 @@ font-style: normal;
   
 
 }
+/*ESTA CLASE FUE CREADA PARA PROBAR EL CMABIO DE P A DIV PARA EL TEXTO EDITABLE*/
+.testnew{
+    line-height: normal;
+    font-size: 29px;
+    color: white;
+    margin-left: 9%;
+}
+.testnew2{
+    line-height: normal;
+    font-size: 31px;
+    color: white;
+    margin-left: 9%;
+    font-weight: bolder;
+}
 
+.testnew3{
+    line-height: normal;
+    font-size: 31px;
+    color: white;
+    margin-left: 9%;
+    font-weight: 600;
+}
 .cumples{
     float: left;
     width: 100%;
@@ -640,7 +661,7 @@ filter: grayscale(0%) brightness(50%);
     position:absolute; 
     top:39%;
     left:0;
-    width:100%;
+    width:72%;
     z-index:60;
 }.ful_div {
     position: relative;
