@@ -2156,7 +2156,12 @@ div.image-upload{
 .miki{
     margin-top: 60px !important;
 }
-
+.articulo-text p {
+    margin-left: 0 auto;
+    padding: 1px 49px;
+    margin-left: 8px;
+    top: -30px;
+    text-align: justify !important;
 }
 
 
