@@ -2158,7 +2158,7 @@ div.image-upload{
 }
 .articulo-text p {
     margin-left: 0 auto;
-    padding: 1px 49px;
+    padding: 0px 50px !important;
     margin-left: 8px;
     top: -30px;
     text-align: justify !important;
