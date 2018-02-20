@@ -1,0 +1,201 @@
+{% extends "../base.html" %}
+
+{% block title %}
+{{ site.name }}
+{% end %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css" />
+<style>
+    .banner-cumple{
+        position:relative;
+        top:90px;
+        height: 500px;
+    }
+    .img-banner-cumple{
+        position: absolute; 
+        top: 100px;
+    }
+    .txt-a-title {
+        position: absolute;
+        color: white;
+        max-width: 67%;
+        width: 100%;
+        text-align: left;
+        height: 100px;
+        overflow: hidden;
+        left: 3%;
+        top: 0;
+    }
+    .txt-b-title {
+        position: absolute;
+        color: white;
+        text-align: left;
+        max-width: 60%;
+        max-height: 280px;
+        overflow: hidden;
+        left: 3%;
+        top: 20%;
+    }
+</style>
+{% end %}
+
+{% block javascript %}
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    }
+}
+</script>
+
+{% end %}
+
+
+{% block body %}
+
+{% if is_admin %}
+    {% set editabletext = 'editabletext' %}
+{% else %}
+    {% set editabletext = '' %}
+{% end %}
+
+
+{% include '../home/header_inside.html' %}
+<!--BANNER PPAL -->
+<div style="position:relative;height: 500px;">
+    {% if is_admin %}
+        <div class="image-upload" style="position: absolute; top: 100px;">
+            <label for="img_cumple">
+                <img class="change-image" src="{{ site_base }}/static/img/btn-edit.png" onmouseover="this.src='{{ site_base }}/static/img/btn-edit-hover.png';" onmouseout="this.src='{{ site_base }}/static/img/btn-edit.png';">
+            </label>
+            <input type="file" class="editableimage" image-id="{{ site.name }}_cumple" name="image" id="img_cumple" >
+        </div>
+    {% end %}
+    <img id="{{ site.name }}_cumple" src="{{ read_image(site.name + '_cumple', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_cumple', 500) }}'" class="img-responsive fondo-articulo-juegos" alt="item" style="height: 100%;">
+    <h1 align="center" class="{{editabletext}} txt-area-juegos-title"  text-id="{{ site.name + '_txt_cumples' }}">{{ read_text(site.name + '_txt_cumples') }}</h1>
+</div>
+<div class="container">
+    
+    <h2 align="center" class="{{editabletext}} cumples_2"  text-id="{{ site.name + '_txt_cumples_2' }}">{{ read_text(site.name + '_txt_cumples_2') }}</h2>
+    <!--BANNER INFO 1 -->
+    <div class="banner-cumple">
+            {% if is_admin %}
+            <div class="image-upload" class="img-banner-cumple">
+                <label for="img_cumple_1">
+                    <img class="change-image" src="{{ site_base }}/static/img/btn-edit.png" onmouseover="this.src='{{ site_base }}/static/img/btn-edit-hover.png';" onmouseout="this.src='{{ site_base }}/static/img/btn-edit.png';">
+                </label>
+                <input type="file" class="editableimage" image-id="{{ site.name }}_cumple_1" name="image" id="img_cumple_1" >
+            </div>
+        {% end %}
+        <img id="{{ site.name }}_cumple_1" src="{{ read_image(site.name + '_cumple_1', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_cumple_1', 500) }}'" class="img-responsive fondo-articulo-a" alt="item" style="height: 100%;">
+        <h1 align="center" class="{{editabletext}} txt-a-title"  text-id="{{ site.name + '_txt_cumple_1' }}">{{ read_text(site.name + '_txt_cumple_1') }}</h1>
+        <h4 align="center" class="{{editabletext}} txt-b-title"  text-id="{{ site.name + '_txt_cumple_1_1' }}">{{ read_text(site.name + '_txt_cumple_1_1') }}</h4>
+    </div>
+
+
+<!-- ACORDEONES --> 
+    <div class="container" style="margin-top: 3%;"> 
+        <button class="col-md-12 col-xs-12 accordion bordes">
+            <b>Cumpleaños (1 a 7 años)</b>
+            <i class="fa fa-plus mas"></i>
+        </button>
+        <div class="panel">
+            <p>Los cumpleaños en Rukayen son un verdadero éxito. Aquí los niños se encuentran en un ambiente amplio, luminoso, con más de 40 estaciones de juegos, donde cada niño se podrá divertir según su interés.</p>
+            <p>La sala para celebrar los cumpleaños está ubicada en el 2do piso para poder realizar el cumpleaños de forma más tranquila e íntima, donde también contamos con un sector para los invitados.</p>
+        </div>
+        <button class="col-md-12 col-xs-12 accordion bordes">
+            <b>Cumpleaños abierto para  15 niños + cumpleañero/a  </b>
+            <i class="fa fa-plus mas"></i>
+        </button>
+        <div class="panel">
+            <p>Esta modalidad permite el ingreso de otros niños, fuera del cumpleaños,  a jugar en Rukayen.</p>
+            <p>Qué incluye?</p>
+            <p>·      2:30 horas de cumpleaños</p>
+            <p>·      Sala de cumpleaños exclusiva 2do piso</p>
+            <p>·      Decoración en colores a elección (Vasos, platos, tenedor y servilleta)</p>
+            <p>·      Invitación digital personalizada para enviar por mail o whatsapp (no impresa)</p>
+            <p>·      1 jugo por niño  + papas fritas + barra cereal</p>
+            <p>·      Piñata + dulces blandos + bolsas para recoger dulces</p>
+            <p>·      15 sorpresas (más de 15 opciones para elegir)</p>
+            <p>·      Disco peques (gratis - solo debes pedirlo)</p>
+            <p>·      Café y Té para adultos (vasos térmicos, leche, endulzante, azúcar y cuchara)</p>
+            <p>·      30 platos, 30 vasos, 30 tenedores + servilletas para adultos</p>
+            <p>·      Incluye: 2 adultos por niño</p>
+            <p>·      REGALO: 3 entradas gratis de juego con tiempo ilimitado -  duración 2 meses</p>
+            <p>*Pueden traer alimentos y decoración adicional</p>
+            <p>La cafetería de RUKAYEN siempre permanece abierta.</p>
+            <p>Valores: Lunes y jueves $205.000* </p>
+            <p>Viernes a Domingo y festivos: $235.000*        Niño adicional: $9.000
+            Tiempo adicional: 30 min  $60.000        
+            CONTROL INGRESO DE INVITADOS: DEBES ENVIAR LISTADO DE INVITADOS EL DIA ANTES DEL CUMPLEAÑOS POR MAIL FRANCISCA@RUKAYEN.CL  
+            Horarios   11:00 a 13:30 hrs  | 14:00 a 16:00 hrs (cafetería**)   | 16:00 a 18:30 hrs Lun a Juev  y Dom   | 16:30 a 19:00 hrs Viernes y Sábado</p>
+        </div>
+        <button class="col-md-12 col-xs-12 accordion bordes">
+            <b>Cumpleaños Exclusivo</b>
+            <i class="fa fa-plus mas"></i>
+        </button> 
+        <div class="panel">
+            <p>Incluye todo lo descrito anteriormente para 30 niños</p>
+            <p>Rukayen cerrado sólo para tu hija/o, por 2:30 hrs. Incluye 30 niños y adultos ilimitados</p>
+            <p>CONSULTA LA OPCIÓN DE MONTAJE TIPO BUFFET EN LA CAFETERIA (sólo cumpleaños exclusivo)</p>
+            <p>Valores: Martes a jueves $325.000*            
+            <p>Viernes a Domingo y festivos: $365.000*     Niño adicional:  $10.000</p>
+            <p>Tiempo adicional:   30 min  $60.000 </p> 
+            <p>IMPORTANTE: EL espacio es para niños de hasta 6 años (DEBES INFORMAR LOS NIÑOS MAYORES QUE ASISTAN, LOS CUALES SE COBRARÁN SI ENTRAN A JUGAR)</p>
+            <p>ADICIONALES:</p>
+            <p>TAPADITOS: 100 unid (2 sabores) + 3 bebidas 2,5 litros  $57.000</p>
+            <p>DECORACIÓN TEMÁTICA 30 niños: $50.000/60.000* (consultar valor por menos niños) *depende de personaje/tema.</p>
+            <p>ACTIVIDADES PARA CONTRATAR:</p>
+            <p>·       Mago entretenido con un show de 30/40 minutos. Valor $80.000</p>
+            <p>·       Pintacaritas  (AEROGRAFÍA) $50.000</p>
+            <p>·       Show de Títeres con canciones, cuento a elección $100.000 (Títeres Caracol)</p>
+            <p>·       Muestra de animales – hurón, chinchilla, hámster, conejos, cata, dragón barbudo y otros $80.000</p>
+            <p>Al contratar un servicio externo se debe informar a RUKAYEN para su autorización y se cobra un fee de $23.800 </p>
+        </div>
+        <button class="col-md-12 col-xs-12 accordion bordes">
+            <b>Término del cumpleaños</b>
+            <i class="fa fa-plus mas"></i>
+        </button>
+        <div class="panel">
+            <p>Una vez finalizado el cumpleaños los invitados tienen 15 minutos para salir de la sala de juegos, pasado este tiempo se cobrará 10.000 pesos cada diez minutos adicionales. El cumpleañero tiene 30 minutos para poder sacar las cosas tranquilamente de la sala de eventos.</p>
+            <p>POR SEGURIDAD LOS GLOBOS SOLO SE PERMITEN PARA DECORACIÓN EN EL 2DO PISO.</p>
+            <p>NO SE PUEDE TRAER CHALA, NI ALCOHOL, NI FUMAR DENTRO DE RUKAYEN.</p>
+            <p>NO SE PUEDE INGRESAR A LA SALA CON TACOS O BOTAS DE SUELA DURA.</p>
+            <p>NO SE PUEDE CONSUMIR ALIMENTOS O BEBIDAS EN LA SALA DE JUEGO.</p>
+            <p>*PRECIO SUJETOS A CAMBIOS SIN PREVIO AVISO.</p>
+        </div>
+        <button class="col-md-12 col-xs-12 accordion bordes">
+            <b>Política de cancelación de cumpleaños</b>
+            <i class="fa fa-plus mas"></i>
+        </button>
+        <div class="panel">
+            <p>Toda cancelación de los servicios contratados que sea efectuada por la Solicitante con 20 días corridos o más de anticipación a la fecha de prestación de los mismos, dará lugar a la devolución del 75% del importe pagado. A su vez, la cancelación que sea efectuada por la solicitante por cualquier motivo con 19 días corridos o menos de anticipación a la fecha de prestación de los servicios, dará lugar a la devolución del 50% del importe pagado. </p> 
+            <p>Por último, cualquier cancelación que sea efectuada por la Solicitante con 10 días corridos o menos de anticipación a la fecha de prestación de los servicios, no dará lugar a devolución alguna. Toda cancelación deberá ser comunicada por escrito a francisca@rukayen.cl . </p> 
+            <p>A su vez, toda cancelación que se genere por enfermedad del menor para quien se contratan los servicios, facultará a la Solicitante a reprogramar, solo una vez, la prestación de los servicios contratados dentro del plazo de 15 días corridos contados desde la fecha inicial, lo cual, sin embargo, estará sujeto y quedará supeditado a la disponibilidad de RUKAYEN. La situación anterior no dará lugar a reembolso alguno. RUKAYEN se reserva el derecho a solicitar acreditación mediante documento o certificado médico si así lo estimara necesario. Si por cualquier razón RUKAYEN se viera imposibilitada de prestar los servicios contratados, la Solicitante tendrá derecho a la devolución de la totalidad del monto pagado. La Solicitante acepta expresamente en este acto los términos antes indicados, renunciando a cualquier acción o reclamo ulterior que pudiera tener lugar con ocasión de los mismos.</p>
+        </div>
+        <button class="col-md-12 col-xs-12 accordion bordes">
+            <b>Reservas</b>
+            <i class="fa fa-plus mas"></i>
+        </button>
+        <div class="panel">
+            <p>Si quieres reservar y disfrutar de la experiencia de cumpleaños en Rukayen pincha <a href="https://www.rukayen.cl/contact">AQUÍ</a></p>
+        </div>
+    </div>
+    
+
+</div>
+
+{% include '../home/footer.html' %}
+{% end %}
+
