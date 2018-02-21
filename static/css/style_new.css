@@ -1497,7 +1497,89 @@ div.image-upload{
 
     }
 
+/* ESTILOS CUMPLEAÑOS 2*/
+    .banner-cumple{
+    position: relative;
+    top: 20px;
+    height: 400px;
+    margin-bottom: 3%;
+    }
+    .img-banner-cumple{
+        position: absolute; 
+        top: 100px;
+    }
+    .txt-title-left {
+        position: absolute;
+        color: white;
+        max-width: 67%;
+        width: 100%;
+        text-align: left;
+        height: 82px;
+        overflow: hidden;
+        left: 3%;
+        top: 0;
+    }
+    .txt-subhead-left{
+        position: absolute;
+        color: white;
+        text-align: left;
+        max-width: 60%;
+        max-height: 280px;
+        overflow: hidden;
+        left: 3%;
+        top: 25%;
+    }
+    .txt-title-right{
+        position: absolute;
+        color: white;
+        max-width: 67%;
+        width: 100%;
+        text-align: left;
+        height: 82px;
+        overflow: hidden;
+        right: 3%;
+        top: 0;
+    }
+    .txt-subhead-right{
+        position: absolute;
+        color: white;
+        text-align: left;
+        max-width: 60%;
+        max-height: 280px;
+        overflow: hidden;
+        right: 3%;
+        top: 25%;
+    }
+    .bajada-cumple{
+        min-height: 100px;
+         margin-bottom: 5%;
 
+    }
+    .txt-subhead-right{
+        position: absolute;
+        color: white;
+        text-align: right;
+        max-width: 60%;
+        max-height: 280px;
+        overflow: hidden;
+        left: 3%;
+        top: 20%;
+    }
+    .img-cumple-info {
+        object-fit: cover;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        padding: 0px;
+        z-index: -1;
+        filter: grayscale(0%) brightness(50%);
+        -webkit-filter: grayscale(0%) brightness(50%);
+        -moz-filter: grayscale(0%) brightness(50%);
+        -ms-filter: grayscale(0%) brightness(50%);
+        -o-filter: grayscale(0%) brightness(50%);
+    }
+/*FIN ESTILOS CUMPLEAÑOS 2*/
 /******************************************************* Start Responsive*************************************/
 @media (max-width: 1216px){
     .text_hora > p {

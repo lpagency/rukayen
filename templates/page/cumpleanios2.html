@@ -7,87 +7,7 @@
 {% block css %}
 <link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css" />
 <style>
-    .banner-cumple{
-    position: relative;
-    top: 20px;
-    height: 400px;
-    margin-bottom: 3%;
-    }
-    .img-banner-cumple{
-        position: absolute; 
-        top: 100px;
-    }
-    .txt-title-left {
-        position: absolute;
-        color: white;
-        max-width: 67%;
-        width: 100%;
-        text-align: left;
-        height: 82px;
-        overflow: hidden;
-        left: 3%;
-        top: 0;
-    }
-    .txt-subhead-left{
-        position: absolute;
-        color: white;
-        text-align: left;
-        max-width: 60%;
-        max-height: 280px;
-        overflow: hidden;
-        left: 3%;
-        top: 25%;
-    }
-    .txt-title-right{
-        position: absolute;
-        color: white;
-        max-width: 67%;
-        width: 100%;
-        text-align: left;
-        height: 82px;
-        overflow: hidden;
-        right: 3%;
-        top: 0;
-    }
-    .txt-subhead-right{
-        position: absolute;
-        color: white;
-        text-align: left;
-        max-width: 60%;
-        max-height: 280px;
-        overflow: hidden;
-        right: 3%;
-        top: 25%;
-    }
-    .bajada-cumple{
-        min-height: 100px;
-         margin-bottom: 5%;
 
-    }
-    .txt-subhead-right{
-        position: absolute;
-        color: white;
-        text-align: right;
-        max-width: 60%;
-        max-height: 280px;
-        overflow: hidden;
-        left: 3%;
-        top: 20%;
-    }
-    .img-cumple-info {
-        object-fit: cover;
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        position: relative;
-        padding: 0px;
-        z-index: -1;
-        filter: grayscale(0%) brightness(50%);
-        -webkit-filter: grayscale(0%) brightness(50%);
-        -moz-filter: grayscale(0%) brightness(50%);
-        -ms-filter: grayscale(0%) brightness(50%);
-        -o-filter: grayscale(0%) brightness(50%);
-    }
 </style>
 {% end %}
 
@@ -169,7 +89,48 @@ for (i = 0; i < acc.length; i++) {
         <h1 align="center" class="{{editabletext}} txt-title-right"  text-id="{{ site.name + '_txt_cumple_2' }}">{{ read_text(site.name + '_txt_cumple_2') }}</h1>
         <h4 align="center" class="{{editabletext}} txt-subhead-right"  text-id="{{ site.name + '_txt_cumple_2_1' }}">{{ read_text(site.name + '_txt_cumple_2_1') }}</h4>
     </div>
-
+    <!--BANNER INFO 3 -->
+    <div class="banner-cumple">
+        {% if is_admin %}
+            <div class="image-upload" class="img-banner-cumple">
+                <label for="img_cumple_3">
+                    <img class="change-image" src="{{ site_base }}/static/img/btn-edit.png" onmouseover="this.src='{{ site_base }}/static/img/btn-edit-hover.png';" onmouseout="this.src='{{ site_base }}/static/img/btn-edit.png';">
+                </label>
+                <input type="file" class="editableimage" image-id="{{ site.name }}_cumple_3" name="image" id="img_cumple_3" >
+            </div>
+        {% end %}
+        <img id="{{ site.name }}_cumple_3" src="{{ read_image(site.name + '_cumple_3', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_cumple_3', 500) }}'" class="img-responsive img-cumple-info" alt="item" style="height: 100%;">
+        <h1 align="center" class="{{editabletext}} txt-title-left"  text-id="{{ site.name + '_txt_cumple_3' }}">{{ read_text(site.name + '_txt_cumple_3') }}</h1>
+        <h4 align="center" class="{{editabletext}} txt-subhead-left"  text-id="{{ site.name + '_txt_cumple_3_1' }}">{{ read_text(site.name + '_txt_cumple_3_1') }}</h4>
+    </div>
+    <!--BANNER INFO 4 -->
+    <div class="banner-cumple">
+        {% if is_admin %}
+            <div class="image-upload" class="img-banner-cumple">
+                <label for="img_cumple_4">
+                    <img class="change-image" src="{{ site_base }}/static/img/btn-edit.png" onmouseover="this.src='{{ site_base }}/static/img/btn-edit-hover.png';" onmouseout="this.src='{{ site_base }}/static/img/btn-edit.png';">
+                </label>
+                <input type="file" class="editableimage" image-id="{{ site.name }}_cumple_4" name="image" id="img_cumple_4" >
+            </div>
+        {% end %}
+        <img id="{{ site.name }}_cumple_4" src="{{ read_image(site.name + '_cumple_4', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_cumple_4', 500) }}'" class="img-responsive img-cumple-info" alt="item" style="height: 100%;">
+        <h1 align="center" class="{{editabletext}} txt-title-right"  text-id="{{ site.name + '_txt_cumple_4' }}">{{ read_text(site.name + '_txt_cumple_4') }}</h1>
+        <h4 align="center" class="{{editabletext}} txt-subhead-right"  text-id="{{ site.name + '_txt_cumple_4_1' }}">{{ read_text(site.name + '_txt_cumple_4_1') }}</h4>
+    </div>
+    <!--BANNER INFO 5 -->
+    <div class="banner-cumple">
+        {% if is_admin %}
+            <div class="image-upload" class="img-banner-cumple">
+                <label for="img_cumple_5">
+                    <img class="change-image" src="{{ site_base }}/static/img/btn-edit.png" onmouseover="this.src='{{ site_base }}/static/img/btn-edit-hover.png';" onmouseout="this.src='{{ site_base }}/static/img/btn-edit.png';">
+                </label>
+                <input type="file" class="editableimage" image-id="{{ site.name }}_cumple_5" name="image" id="img_cumple_5" >
+            </div>
+        {% end %}
+        <img id="{{ site.name }}_cumple_5" src="{{ read_image(site.name + '_cumple_5', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_cumple_5', 500) }}'" class="img-responsive img-cumple-info" alt="item" style="height: 100%;">
+        <h1 align="center" class="{{editabletext}} txt-title-left"  text-id="{{ site.name + '_txt_cumple_5' }}">{{ read_text(site.name + '_txt_cumple_5') }}</h1>
+        <h4 align="center" class="{{editabletext}} txt-subhead-left"  text-id="{{ site.name + '_txt_cumple_5_1' }}">{{ read_text(site.name + '_txt_cumple_5_1') }}</h4>
+    </div>
 </div>
 
 
