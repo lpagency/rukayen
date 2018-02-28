@@ -1511,10 +1511,10 @@ div.image-upload{
     .txt-title-left {
         position: absolute;
         color: white;
-        max-width: 67%;
+        max-width: 65%;
         width: 100%;
         text-align: left;
-        height: 82px;
+        height: 110px;
         overflow: hidden;
         left: 3%;
         top: 0;
@@ -1523,19 +1523,19 @@ div.image-upload{
         position: absolute;
         color: white;
         text-align: left;
-        max-width: 60%;
+        max-width: 65%;
         max-height: 280px;
         overflow: hidden;
         left: 3%;
-        top: 25%;
+        top: 30%;
     }
     .txt-title-right{
         position: absolute;
         color: white;
-        max-width: 67%;
+        max-width: 65%;
         width: 100%;
         text-align: left;
-        height: 82px;
+        height: 110px;
         overflow: hidden;
         right: 3%;
         top: 0;
@@ -1544,27 +1544,18 @@ div.image-upload{
         position: absolute;
         color: white;
         text-align: left;
-        max-width: 60%;
+        max-width: 65%;
         max-height: 280px;
         overflow: hidden;
         right: 3%;
-        top: 25%;
+        top: 30%;
     }
     .bajada-cumple{
         min-height: 100px;
          margin-bottom: 5%;
 
     }
-    .txt-subhead-right{
-        position: absolute;
-        color: white;
-        text-align: right;
-        max-width: 60%;
-        max-height: 280px;
-        overflow: hidden;
-        left: 3%;
-        top: 20%;
-    }
+
     .img-cumple-info {
         object-fit: cover;
         display: inline-block;
