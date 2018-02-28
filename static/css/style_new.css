@@ -1512,7 +1512,6 @@ div.image-upload{
         position: absolute;
         color: white;
         max-width: 65%;
-        width: 100%;
         text-align: left;
         height: 120px;
         overflow: hidden;
@@ -1533,11 +1532,10 @@ div.image-upload{
         position: absolute;
         color: white;
         max-width: 65%;
-        width: 100%;
         text-align: left;
         height: 120px;
         overflow: hidden;
-        right: 3%;
+        right: 4%;
         top: 0;
     }
     .txt-subhead-right{
