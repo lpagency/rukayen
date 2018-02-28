@@ -1514,7 +1514,7 @@ div.image-upload{
         max-width: 65%;
         width: 100%;
         text-align: left;
-        height: 110px;
+        height: 120px;
         overflow: hidden;
         left: 3%;
         top: 0;
@@ -1524,10 +1524,10 @@ div.image-upload{
         color: white;
         text-align: left;
         max-width: 65%;
-        max-height: 280px;
+        max-height: 249px;
         overflow: hidden;
         left: 3%;
-        top: 30%;
+        top: 33%;
     }
     .txt-title-right{
         position: absolute;
@@ -1535,7 +1535,7 @@ div.image-upload{
         max-width: 65%;
         width: 100%;
         text-align: left;
-        height: 110px;
+        height: 120px;
         overflow: hidden;
         right: 3%;
         top: 0;
@@ -1545,10 +1545,10 @@ div.image-upload{
         color: white;
         text-align: left;
         max-width: 65%;
-        max-height: 280px;
+        max-height: 249px;
         overflow: hidden;
         right: 3%;
-        top: 30%;
+        top: 33%;
     }
     .bajada-cumple{
         min-height: 100px;
@@ -1712,7 +1712,59 @@ div.image-upload{
     width: 90%;
     left: 11%;
     }
+/* ESTILOS CUMPLEAÑOS 2 !*/
+    .banner-cumple {
+        position: relative;
+        top: 20px;
+        height: 500px;
+        margin-bottom: 3%;
+    }
+    .txt-title-left {
+        position: absolute;
+        color: white;
+        max-width: 95%;
+        width: 100%;
+        text-align: left;
+        height: 120px;
+        overflow: hidden;
+        left: 3%;
+        top: 0;
+    }
+    .txt-subhead-left{
+        position: absolute;
+        color: white;
+        text-align: left;
+        max-width: 95%;
+        max-height: 249px;
+        overflow: hidden;
+        left: 3%;
+        top: 33%;
+        font-size: 15px !important;
+    }
+    .txt-title-right{
+        position: absolute;
+        color: white;
+        max-width: 95%;
+        width: 100%;
+        text-align: left;
+        height: 120px;
+        overflow: hidden;
+        right: 3%;
+        top: 0;
+    }
+    .txt-subhead-right{
+        position: absolute;
+        color: white;
+        text-align: left;
+        max-width: 95%;
+        max-height: 249px;
+        overflow: hidden;
+        right: 3%;
+        top: 33%;
+        font-size: 15px !important;
+    }
 
+/* ESTILOS CUMPLEAÑOS 2 !*/
 }
 
 
