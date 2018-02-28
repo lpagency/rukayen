@@ -1735,7 +1735,7 @@ div.image-upload{
         color: white;
         text-align: left;
         max-width: 95%;
-        max-height: 249px;
+        max-height: 258px;
         overflow: hidden;
         left: 3%;
         top: 33%;
@@ -1757,13 +1757,16 @@ div.image-upload{
         color: white;
         text-align: left;
         max-width: 95%;
-        max-height: 249px;
+        max-height: 258px;
         overflow: hidden;
         right: 3%;
         top: 33%;
         font-size: 15px !important;
     }
+    .title-acordeon{
 
+        font-size: 15px;
+    }
 /* ESTILOS CUMPLEAÑOS 2 !*/
 }
 
