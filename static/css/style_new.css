@@ -3,8 +3,6 @@
  src:url('OpenSans-Light.ttf') format('truetype');
  font-weight: 300;
 font-style: normal;
-  
-
 }
 /*ESTA CLASE FUE CREADA PARA PROBAR EL CMABIO DE P A DIV PARA EL TEXTO EDITABLE*/
 .testnew{
@@ -50,6 +48,11 @@ font-style: normal;
 .bordes{
     border: 1px solid #ddd;
     text-align: left;
+}
+
+.miki
+{
+    margin-top: 150px;
 }
 
 .mas{
@@ -1468,6 +1471,7 @@ div.image-upload{
     height: auto;
     top:72px;
     margin-left: -60px;
+    margin-bottom: 10px;
 }
 
 
