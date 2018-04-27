@@ -1,251 +1,257 @@
 {% extends "../base.html" %}
 
 {% block title %}
-{{ site.name }}
+    {{ site.name }}
 {% end %}
 
 {% block css %}
-<link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site_base }}/static/css/banners.css">
 {% end %}
 
 {% block javascript %}
 
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
 
-for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function(){
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
+        for (i = 0; i < acc.length; i++)
+        {
+            acc[i].onclick = function()
+            {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block")
+                {
+                    panel.style.display = "none";
+                }
+                else
+                {
+                    panel.style.display = "block";
+                }
+            }
         }
-    }
-}
-</script>
+    </script>
 
 {% end %}
-
 
 {% block body %}
 
-{% if is_admin %}
-    {% set editabletext = 'editabletext' %}
-{% else %}
-    {% set editabletext = '' %}
-{% end %}
-
-
-{% include '../home/header_inside.html' %}
-<div style="position:relative;height: 500px;">
     {% if is_admin %}
-        <div class="image-upload" style="position: absolute; top: 100px;">
-            <label for="img_cumple">
-                <img class="change-image" src="{{ site_base }}/static/img/btn-edit.png" onmouseover="this.src='{{ site_base }}/static/img/btn-edit-hover.png';" onmouseout="this.src='{{ site_base }}/static/img/btn-edit.png';">
-            </label>
-            <input type="file" class="editableimage" image-id="{{ site.name }}_cumple" name="image" id="img_cumple" >
-        </div>
+        {% set editabletext = 'editabletext' %}
+    {% else %}
+        {% set editabletext = '' %}
     {% end %}
-    <img id="{{ site.name }}_cumple" src="{{ read_image(site.name + '_cumple', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_cumple', 500) }}'" class="img-responsive fondo-articulo-juegos" alt="item" style="height: 100%;">
-    <h1 align="center" class="{{editabletext}} txt-area-juegos-title"  text-id="{{ site.name + '_txt_cumples' }}">{{ read_text(site.name + '_txt_cumples') }}</h1>
-</div>
-<div class="container">
 
-    <h2 align="center" class="{{editabletext}} cumples_2"  text-id="{{ site.name + '_txt_cumples_2' }}">{{ read_text(site.name + '_txt_cumples_2') }}</h2>
+    {% include '../home/header_inside.html' %}
 
-    <div style="position:relative;top:90px;height: 500px;">
-            {% if is_admin %}
+    <div style="position:relative;height: 500px;">
+        {% if is_admin %}
             <div class="image-upload" style="position: absolute; top: 100px;">
-                <label for="img_cumple_1">
+                <label for="img_cumple">
                     <img class="change-image" src="{{ site_base }}/static/img/btn-edit.png" onmouseover="this.src='{{ site_base }}/static/img/btn-edit-hover.png';" onmouseout="this.src='{{ site_base }}/static/img/btn-edit.png';">
                 </label>
-                <input type="file" class="editableimage" image-id="{{ site.name }}_cumple_1" name="image" id="img_cumple_1" >
+                <input type="file" class="editableimage" image-id="{{ site.name }}_cumple" name="image" id="img_cumple" >
             </div>
         {% end %}
-        <img id="{{ site.name }}_cumple_1" src="{{ read_image(site.name + '_cumple_1', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_cumple_1', 500) }}'" class="img-responsive fondo-articulo-a" alt="item" style="height: 100%;">
-        <h1 align="center" class="{{editabletext}} txt-a-title"  text-id="{{ site.name + '_txt_cumple_1' }}">{{ read_text(site.name + '_txt_cumple_1') }}</h1>
-        <h4 align="center" class="{{editabletext}} txt-b-title"  text-id="{{ site.name + '_txt_cumple_1_1' }}">{{ read_text(site.name + '_txt_cumple_1_1') }}</h4>
+        <img id="{{ site.name }}_cumple" src="{{ read_image(site.name + '_cumple', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_cumple', 500) }}'" class="img-responsive fondo-articulo-juegos" alt="item" style="height: 100%;">
+        <h1 align="center" class="{{editabletext}} txt-area-juegos-title"  text-id="{{ site.name + '_txt_cumples' }}">{{ read_text(site.name + '_txt_cumples') }}</h1>
     </div>
 
-    <div style="position:relative;top: 41px;height: 500px;">
+    <div class="container">
+        <h2 align="center" class="{{editabletext}} cumples_2"  text-id="{{ site.name + '_txt_cumples_2' }}">{{ read_text(site.name + '_txt_cumples_2') }}</h2>
+        <div class="banner-1 banners-cumple">
             {% if is_admin %}
-            <div class="image-upload" style="position: absolute; top: 100px;">
-                <label for="img_cumple_2">
-                    <img class="change-image" src="{{ site_base }}/static/img/btn-edit.png" onmouseover="this.src='{{ site_base }}/static/img/btn-edit-hover.png';" onmouseout="this.src='{{ site_base }}/static/img/btn-edit.png';">
-                </label>
-                <input type="file" class="editableimage" image-id="{{ site.name }}_cumple_2" name="image" id="img_cumple_2" >
-            </div>
-        {% end %}
-        <img id="{{ site.name }}_cumple_2" src="{{ read_image(site.name + '_cumple_2', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_cumple_2', 500) }}'" class="img-responsive fondo-articulo-a" alt="item" style="height: 100%;">
-        <h1 align="center" class="{{editabletext}} txt-c-title"  text-id="{{ site.name + '_txt_cumple_2' }}">{{ read_text(site.name + '_txt_cumple_2') }}</h1>
-        <h4 align="center" class="{{editabletext}} txt-d-title"  text-id="{{ site.name + '_txt_cumple_2_1' }}">{{ read_text(site.name + '_txt_cumple_2_1') }}</h4>
-    </div>
+                <div class="image-upload" style="position: absolute; top: 100px;">
+                    <label for="img_cumple_1">
+                        <img class="change-image" src="{{ site_base }}/static/img/btn-edit.png" onmouseover="this.src='{{ site_base }}/static/img/btn-edit-hover.png';" onmouseout="this.src='{{ site_base }}/static/img/btn-edit.png';">
+                    </label>
+                    <input type="file" class="editableimage" image-id="{{ site.name }}_cumple_1" name="image" id="img_cumple_1" >
+                </div>
+            {% end %}
+            <img id="{{ site.name }}_cumple_1" src="{{ read_image(site.name + '_cumple_1', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_cumple_1', 500) }}'" class="img-responsive fondo-articulo-a" alt="item" style="height: 100%;">
+            <h1 align="center" class="{{editabletext}} txt-a-title"  text-id="{{ site.name + '_txt_cumple_1' }}">{{ read_text(site.name + '_txt_cumple_1') }}</h1>
+            <h4 align="center" class="{{editabletext}} txt-b-title"  text-id="{{ site.name + '_txt_cumple_1_1' }}">{{ read_text(site.name + '_txt_cumple_1_1') }}</h4>
+        </div>
 
-    <div style="position:relative;top: -8px;height: 500px;">
+        <div class="banner-2 banners-cumple">
             {% if is_admin %}
-            <div class="image-upload" style="position: absolute; top: 100px;">
-                <label for="img_cumple_3">
-                    <img class="change-image" src="{{ site_base }}/static/img/btn-edit.png" onmouseover="this.src='{{ site_base }}/static/img/btn-edit-hover.png';" onmouseout="this.src='{{ site_base }}/static/img/btn-edit.png';">
-                </label>
-                <input type="file" class="editableimage" image-id="{{ site.name }}_cumple_3" name="image" id="img_cumple_3" >
-            </div>
-        {% end %}
-        <img id="{{ site.name }}_cumple_3" src="{{ read_image(site.name + '_cumple_3', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_cumple_3', 500) }}'" class="img-responsive fondo-articulo-a" alt="item" style="height: 100%;">
-        <h1 align="center" class="{{editabletext}} txt-a-title"  text-id="{{ site.name + '_txt_cumple_3' }}">{{ read_text(site.name + '_txt_cumple_3') }}</h1>
-        <h4 align="center" class="{{editabletext}} txt-b-title"  text-id="{{ site.name + '_txt_cumple_3_1' }}">{{ read_text(site.name + '_txt_cumple_3_1') }}</h4>
-    </div>
+                <div class="image-upload" style="position: absolute; top: 100px;">
+                    <label for="img_cumple_2">
+                        <img class="change-image" src="{{ site_base }}/static/img/btn-edit.png" onmouseover="this.src='{{ site_base }}/static/img/btn-edit-hover.png';" onmouseout="this.src='{{ site_base }}/static/img/btn-edit.png';">
+                    </label>
+                    <input type="file" class="editableimage" image-id="{{ site.name }}_cumple_2" name="image" id="img_cumple_2" >
+                </div>
+            {% end %}
+            <img id="{{ site.name }}_cumple_2" src="{{ read_image(site.name + '_cumple_2', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_cumple_2', 500) }}'" class="img-responsive fondo-articulo-a" alt="item" style="height: 100%;">
+            <h1 align="center" class="{{editabletext}} txt-c-title"  text-id="{{ site.name + '_txt_cumple_2' }}">{{ read_text(site.name + '_txt_cumple_2') }}</h1>
+            <h4 align="center" class="{{editabletext}} txt-d-title"  text-id="{{ site.name + '_txt_cumple_2_1' }}">{{ read_text(site.name + '_txt_cumple_2_1') }}</h4>
+        </div>
 
-    <div style="position:relative;top: -55px;height: 500px;">
+        <div class="banner-3 banners-cumple">
             {% if is_admin %}
-            <div class="image-upload" style="position: absolute; top: 100px;">
-                <label for="img_cumple_4">
-                    <img class="change-image" src="{{ site_base }}/static/img/btn-edit.png" onmouseover="this.src='{{ site_base }}/static/img/btn-edit-hover.png';" onmouseout="this.src='{{ site_base }}/static/img/btn-edit.png';">
-                </label>
-                <input type="file" class="editableimage" image-id="{{ site.name }}_cumple_4" name="image" id="img_cumple_4" >
-            </div>
-        {% end %}
-        <img id="{{ site.name }}_cumple_4" src="{{ read_image(site.name + '_cumple_4', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_cumple_4', 500) }}'" class="img-responsive fondo-articulo-a" alt="item" style="height: 100%;">
-        <h1 align="center" class="{{editabletext}} txt-c-title"  text-id="{{ site.name + '_txt_cumple_4' }}">{{ read_text(site.name + '_txt_cumple_4') }}</h1>
-        <h4 align="center" class="{{editabletext}} txt-d-title"  text-id="{{ site.name + '_txt_cumple_4_1' }}">{{ read_text(site.name + '_txt_cumple_4_1') }}</h4>
-    </div>
+                <div class="image-upload" style="position: absolute; top: 100px;">
+                    <label for="img_cumple_3">
+                        <img class="change-image" src="{{ site_base }}/static/img/btn-edit.png" onmouseover="this.src='{{ site_base }}/static/img/btn-edit-hover.png';" onmouseout="this.src='{{ site_base }}/static/img/btn-edit.png';">
+                    </label>
+                    <input type="file" class="editableimage" image-id="{{ site.name }}_cumple_3" name="image" id="img_cumple_3" >
+                </div>
+            {% end %}
+            <img id="{{ site.name }}_cumple_3" src="{{ read_image(site.name + '_cumple_3', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_cumple_3', 500) }}'" class="img-responsive fondo-articulo-a" alt="item" style="height: 100%;">
+            <h1 align="center" class="{{editabletext}} txt-a-title"  text-id="{{ site.name + '_txt_cumple_3' }}">{{ read_text(site.name + '_txt_cumple_3') }}</h1>
+            <h4 align="center" class="{{editabletext}} txt-b-title"  text-id="{{ site.name + '_txt_cumple_3_1' }}">{{ read_text(site.name + '_txt_cumple_3_1') }}</h4>
+        </div>
 
-    <div style="position:relative;top: -102px;height: 400px; margin-bottom: -80px;">
+        <div class="banner-4 banners-cumple">
             {% if is_admin %}
-            <div class="image-upload" style="position: absolute; top: 100px;">
-                <label for="img_cumple_5">
-                    <img class="change-image" src="{{ site_base }}/static/img/btn-edit.png" onmouseover="this.src='{{ site_base }}/static/img/btn-edit-hover.png';" onmouseout="this.src='{{ site_base }}/static/img/btn-edit.png';">
-                </label>
-                <input type="file" class="editableimage" image-id="{{ site.name }}_cumple_5" name="image" id="img_cumple_5" >
-            </div>
-        {% end %}
-        <img id="{{ site.name }}_cumple_5" src="{{ read_image(site.name + '_cumple_5', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_cumple_5', 500) }}'" class="img-responsive fondo-articulo-a" alt="item" style="height: 100%;">
-        <h1 align="center" class="{{editabletext}} txt-a-title"  text-id="{{ site.name + '_txt_cumple_5' }}">{{ read_text(site.name + '_txt_cumple_5') }}</h1>
-        <h4 align="center" class="{{editabletext}} txt-b-title"  text-id="{{ site.name + '_txt_cumple_5_1' }}">{{ read_text(site.name + '_txt_cumple_5_1') }}</h4>
-    </div>
-    <button class="col-md-12 col-xs-12 accordion bordes">
-        <b><u>Cumpleaños Abierto 15 niños + Cumpleañero</u></b>
-        <i class="fa fa-plus mas"></i>
-    </button>
-    <div class="panel">
-        <p>Esta modalidad permite el ingreso de otros niños, fuera del cumpleaños, a jugar en Rukayen.</p>
-        <p>Incluye:</p>
-        <p><b>·</b> 2:30 horas de cumpleaños</p>
-        <p><b>·</b> Sala de cumpleaños exclusiva 2do piso – sala decorada con </p>
-        <p><b>·</b> Invitación digital personalizada con foto de la cumpleañera/o (no impresa)</p>
-        <p><b>·</b> Mantel a elección – variedad de colores</p>
-        <p><b>·</b> Platos y Vasos plásticos colores surtidos (lavables)</p>
-        <p><b>·</b> 1 jugo por niño + papas fritas + barra cereal</p>
-        <p><b>·</b> Piñata + dulces blandos + bolsas para recoger dulces de color</p>
-        <p><b>·</b> 15 sorpresas (más de 15 opciones para elegir) – si necesitas sorpresas adicionales $1.700 c/u</p>
-        <p><b>·</b> Disco peques (opcional)</p>
-        <p><b>·</b> Café y Té para adultos (tazas, leche, endulzante, azúcar y cuchara)</p>
-        <p><b>·</b> 30 platos, 30 vasos, 30 tenedores + servilletas para adultos</p>
-        <p><b>·</b> Incluye: 2 adultos por niño</p>
-        <p><b>·</b> REGALO: 3 entradas gratis para venir a jugar por tiempo ilimitado con una duración 2 meses</p>
-        <p>Puedes traer todo lo adicional que quieras ese día para decorar o comer. La cafetería de RUKAYEN siempre permanece abierta.</p>
-        <p><b>Valores:</b></p>
-        <p><b>Lunes a jueves $215.000</b></p>
-        <p><b>Viernes a Domingo y festivos: $245.000</b></p>
-        <br>
-        <p><b>Horarios:</b></p>
-        <p><b>AM</b>: 11.00 a 13.30 hrs</p>
-        <p><b>PM</b>: lun a juev 16.00 a 18.30 hrs - sab 16.30 hrs</p>
-        <p>IMPORTANTE: EL espacio es para niños de hasta 7 años - DEBES INFORMAR LOS NIÑOS MAYORES QUE ASISTAN, LOS CUALES SE COBRARÁN SI ENTRAN A JUGAR.</p>
-    </div>
-    <button class="col-md-12 col-xs-12 accordion bordes">
-        <b><u>Cumpleaños Exclusivo 30 niños</u></b>
-        <i class="fa fa-plus mas"></i>
-    </button>
-    <div class="panel">
-        <p>RUKAYEN cerrado durante el cumpleaños</p>
-        <p>Incluye:</p>
-        <p><b>·</b> 2:30 horas de cumpleaños</p>
-        <p><b>·</b> Sala de cumpleaños exclusiva 2do piso – sala decorada con </p>
-        <p><b>·</b> Invitación digital personalizada con foto de la cumpleañera/o (no impresa)</p>
-        <p><b>·</b> Mantel a elección – variedad de colores</p>
-        <p><b>·</b> Platos y Vasos plásticos colores surtidos (lavables)</p>
-        <p><b>·</b> 1 jugo por niño + papas fritas + barra cereal</p>
-        <p><b>·</b> Piñata + dulces blandos + bolsas para recoger dulces de color</p>
-        <p><b>·</b> 30 sorpresas (más de 15 opciones para elegir) – si necesitas sorpresas adicionales  $1.700 c/u</p>
-        <p><b>·</b> Disco peques (opcional)</p>
-        <p><b>·</b> Café y Té para adultos (tazas, leche, endulzante, azúcar y cuchara)</p>
-        <p><b>·</b> 40 platos,40 vasos, 40 tenedores + servilletas para adultos (vasos plástico, lavables)</p>
-        <p><b>·</b> Incluye: 2 adultos por niño</p>
-        <p><b>·</b> REGALO: 3 entradas gratis para venir a jugar por tiempo ilimitado con una duración 2 meses</p>
-        <p>Puedes traer todo lo adicional que quieras ese día para decorar o comer. La cafetería de RUKAYEN siempre permanece abierta.</p>
-        <p><b>Valores:</b></p>
-        <p><b>Lunes a jueves $335.000</b></p>
-        <p><b>Viernes a Domingo y festivos: $375.000</b></p>
-        <p><b>Niño adicional: $10.000</b></p>
-        <br>
-        <p><b>Horarios:</b></p>
-        <p><b>AM</b>: 11.00 a 13.30 hrs</p>
-        <p><b>PM</b>: lun a juev 16.00 a 18.30 hrs - sab 16.30 hrs</p>
-        <p>IMPORTANTE: EL espacio es para niños de hasta 7 años - DEBES INFORMAR LOS NIÑOS MAYORES QUE ASISTAN, LOS CUALES SE COBRARÁN SI ENTRAN A JUGAR.</p>
-    </div>
-    <button class="col-md-12 col-xs-12 accordion bordes">
-        <b><u>Actividades para Contratar y Adicionales</u></b>
-        <i class="fa fa-plus mas"></i>
-    </button>
-    <div class="panel">
-        <p><b>· Mago</b> entretenido con un show de 30/40 minutos.</p>
-        <p style="margin-left: 30px;">Valor $80.000</p>
-        <p><b>· Pintacaritas</b> (tatuajes temporales 2hrs)</p>
-        <p style="margin-left: 30px;">Valor $60.000</p>
-        <p><b>·</b> Show de <b>Títeres</b> con canciones, cuento a elección (Títeres Caracol) 40 minutos</p>
-        <p style="margin-left: 30px;">Valor $100.000 </p>
-        <p><b>·</b>Muestra de <b>animales</b> hurón, chinchilla, hámster, conejos, cata, dragón barbudo y otros </p>
-        <p style="margin-left: 30px;">Valor $80.000</p>
-        <p><b>· Pinta tu polera </b>cada invitado pinta su polera con temperas especiales para tela, se entrega la polera lista para usar en una bolsa transparente </p>
-        <p style="margin-left: 30px;">Valor $5.000 x niño</p>
-        <p><b>· Taller de máscaras </b>decoración de máscaras y pulseras </p>
-        <p style="margin-left: 30px;">Valor $4.000 x niño </p>
-        <p><b>· Taller de Ciencia </b>desde 4.500 x niño pedir listado de actividades </p>
-        <br>
-        <p><b><u>ADICIONALES Y OTROS:</u></b></p>
-        <p>30 min adicional de cumpleaños $80.000</p>
-        <p>TAPADITOS: 100 unid (2 sabores) + 3 bebidas 2,5 litros $57.000</p>
-        <p>DECORACIÓN TEMÁTICA 30 niños aprox: $65.000 (consultar valor por menos niños)</p>
-        <br>
-        <p><b><u>SERVICIOS EXTERNOS:</u> si contratas cualquier servicio adicional para traer a RUKAYEN debes cancelar un fee de $30.000</b></p>
-    </div>
-    <button class="col-md-12 col-xs-12 accordion bordes">
-        <b><u>Politicas de Cancelación del Cumpleaños</u></b>
-        <i class="fa fa-plus mas"></i>
-    </button>
-    <div class="panel">
-        <p>Toda cancelación de los servicios contratados que sea efectuada por la Solicitante con 20 días corridos o más de anticipación a la fecha de prestación de los mismos, dará lugar a la devolución del 100% del importe pagado. A su vez, la cancelación que sea efectuada por la solicitante por cualquier motivo con 19 días corridos o menos de anticipación a la fecha de prestación de los servicios, dará lugar a la devolución del 75% del importe pagado. Por último, cualquier cancelación que sea efectuada por la Solicitante con 10 días corridos o menos de anticipación a la fecha de prestación de los servicios, no dará lugar a devolución alguna. Toda cancelación deberá ser comunicada por escrito a francisca@rukayen.cl. A su vez, toda cancelación que se genere por enfermedad del menor para quien se contratan los servicios, facultará a la Solicitante a reprogramar, solo una vez, la prestación de los servicios contratados dentro del plazo de 15 días corridos contados desde la fecha inicial, lo cual, sin embargo, estará sujeto y quedará supeditado a la disponibilidad de RUKAYEN. La situación anterior no dará lugar a reembolso alguno. RUKAYEN se reserva el derecho a solicitar acreditación mediante documento o certificado médico si así lo estimara necesario. Si por cualquier razón RUKAYEN se viera imposibilitada de prestar los servicios contratados, la Solicitante tendrá derecho a la devolución de la totalidad del monto pagado. La Solicitante acepta expresamente en este acto los términos antes indicados, renunciando a cualquier acción o reclamo ulterior que pudiera tener lugar con ocasión de los mismos.</p>
- </p>
-    </div>
-    <button class="col-md-12 col-xs-12 accordion bordes">
-        <b><u>Término del Cumpleaños</u></b>
-        <i class="fa fa-plus mas"></i>
-    </button>
-    <div class="panel">
-        <p>Una vez finalizado el cumpleaños los invitados tienen 15 minutos para salir de la sala de juegos, pasado este tiempo se cobrará 10.000 pesos cada diez minutos adicionales. El cumpleañero tiene 30 minutos para poder sacar las cosas tranquilamente de la sala de eventos.</p>
-        <p><b>· </b>POR SEGURIDAD LOS GLOBOS SOLO SE PERMITEN PARA DECORACIÓN EN EL 2DO PISO</p>
-        <p><b>· </b>NO SE PUEDE TRAER CHALLA, NI ALCOHOL, NI FUMAR DENTRO DE RUKAYEN</p>
-        <p><b>· </b>NO SE PUEDE INGRESAR A LA SALA CON TACOS O BOTAS DE SUELA DURA</p>
-        <p><b>· </b>NO SE PUEDE CONSUMIR ALIMENTOS O BEBIDAS EN LA SALA DE JUEGO</p>
-        <p><b>· </b>PRECIOS SUJETOS A CAMBIO SIN PREVIO AVISO</p>
-    </div>
-    <button class="col-md-12 col-xs-12 accordion bordes">
-        <b><u>Como hago una reserva</u></b>
-        <i class="fa fa-plus mas"></i>
-    </button>
-    <div class="panel">
-    <p>Con el abono del 50%  una vez confirmada la fecha tienes 48 hrs para realizar el abono a:</p>
-    <p>- Rukayen EIRL</p>
-    <p>- Rut 76.405.733-3</p>
-    <p>- Cta cte BCI 70702900</p> 
-    <p>- <a href="mailto:francisca@rukayen.cl">francisca@rukayen.cl</a></p>
-    <p>Debes enviar un mail con la copia de la reserva, nombre y edad del cumpleañero y tu celular</p>
+                <div class="image-upload" style="position: absolute; top: 100px;">
+                    <label for="img_cumple_4">
+                        <img class="change-image" src="{{ site_base }}/static/img/btn-edit.png" onmouseover="this.src='{{ site_base }}/static/img/btn-edit-hover.png';" onmouseout="this.src='{{ site_base }}/static/img/btn-edit.png';">
+                    </label>
+                    <input type="file" class="editableimage" image-id="{{ site.name }}_cumple_4" name="image" id="img_cumple_4" >
+                </div>
+            {% end %}
+            <img id="{{ site.name }}_cumple_4" src="{{ read_image(site.name + '_cumple_4', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_cumple_4', 500) }}'" class="img-responsive fondo-articulo-a" alt="item" style="height: 100%;">
+            <h1 align="center" class="{{editabletext}} txt-c-title"  text-id="{{ site.name + '_txt_cumple_4' }}">{{ read_text(site.name + '_txt_cumple_4') }}</h1>
+            <h4 align="center" class="{{editabletext}} txt-d-title"  text-id="{{ site.name + '_txt_cumple_4_1' }}">{{ read_text(site.name + '_txt_cumple_4_1') }}</h4>
+        </div>
 
+        <div class="banner-5">
+            {% if is_admin %}
+                <div class="image-upload" style="position: absolute; top: 100px;">
+                    <label for="img_cumple_5">
+                        <img class="change-image" src="{{ site_base }}/static/img/btn-edit.png" onmouseover="this.src='{{ site_base }}/static/img/btn-edit-hover.png';" onmouseout="this.src='{{ site_base }}/static/img/btn-edit.png';">
+                    </label>
+                    <input type="file" class="editableimage" image-id="{{ site.name }}_cumple_5" name="image" id="img_cumple_5" >
+                </div>
+            {% end %}
+            <img id="{{ site.name }}_cumple_5" src="{{ read_image(site.name + '_cumple_5', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_cumple_5', 500) }}'" class="img-responsive fondo-articulo-a" alt="item" style="height: 100%;">
+            <h1 align="center" class="{{editabletext}} txt-a-title"  text-id="{{ site.name + '_txt_cumple_5' }}">{{ read_text(site.name + '_txt_cumple_5') }}</h1>
+            <h4 align="center" class="{{editabletext}} txt-b-title"  text-id="{{ site.name + '_txt_cumple_5_1' }}">{{ read_text(site.name + '_txt_cumple_5_1') }}</h4>
+        </div>
+        <button class="col-md-12 col-xs-12 accordion bordes">
+            <b><u>Cumpleaños Abierto 15 niños + Cumpleañero</u></b>
+            <i class="fa fa-plus mas"></i>
+        </button>
+        <div class="panel">
+            <p>Esta modalidad permite el ingreso de otros niños, fuera del cumpleaños, a jugar en Rukayen.</p>
+            <p>Incluye:</p>
+            <p><b>·</b> 2:30 horas de cumpleaños</p>
+            <p><b>·</b> Sala de cumpleaños exclusiva 2do piso – sala decorada con </p>
+            <p><b>·</b> Invitación digital personalizada con foto de la cumpleañera/o (no impresa)</p>
+            <p><b>·</b> Mantel a elección – variedad de colores</p>
+            <p><b>·</b> Platos y Vasos plásticos colores surtidos (lavables)</p>
+            <p><b>·</b> 1 jugo por niño + papas fritas + barra cereal</p>
+            <p><b>·</b> Piñata + dulces blandos + bolsas para recoger dulces de color</p>
+            <p><b>·</b> 15 sorpresas (más de 15 opciones para elegir) – si necesitas sorpresas adicionales $1.700 c/u</p>
+            <p><b>·</b> Disco peques (opcional)</p>
+            <p><b>·</b> Café y Té para adultos (tazas, leche, endulzante, azúcar y cuchara)</p>
+            <p><b>·</b> 30 platos, 30 vasos, 30 tenedores + servilletas para adultos</p>
+            <p><b>·</b> Incluye: 2 adultos por niño</p>
+            <p><b>·</b> REGALO: 3 entradas gratis para venir a jugar por tiempo ilimitado con una duración 2 meses</p>
+            <p>Puedes traer todo lo adicional que quieras ese día para decorar o comer. La cafetería de RUKAYEN siempre permanece abierta.</p>
+            <p><b>Valores:</b></p>
+            <p><b>Lunes a jueves $225.000</b></p>
+            <p><b>Viernes a Domingo y festivos: $245.000</b></p>
+            <br>
+            <p><b>Horarios:</b></p>
+            <p><b>AM</b>: 11.00 a 13.30 hrs</p>
+            <p><b>PM</b>: lun a juev 16.00 a 18.30 hrs - sab 16.30 hrs</p>
+            <p>IMPORTANTE: EL espacio es para niños de hasta 7 años - DEBES INFORMAR LOS NIÑOS MAYORES QUE ASISTAN, LOS CUALES SE COBRARÁN SI ENTRAN A JUGAR.</p>
+        </div>
+        <button class="col-md-12 col-xs-12 accordion bordes">
+            <b><u>Cumpleaños Exclusivo 30 niños</u></b>
+            <i class="fa fa-plus mas"></i>
+        </button>
+        <div class="panel">
+            <p>RUKAYEN cerrado durante el cumpleaños</p>
+            <p>Incluye:</p>
+            <p><b>·</b> 2:30 horas de cumpleaños</p>
+            <p><b>·</b> Sala de cumpleaños exclusiva 2do piso – sala decorada con </p>
+            <p><b>·</b> Invitación digital personalizada con foto de la cumpleañera/o (no impresa)</p>
+            <p><b>·</b> Mantel a elección – variedad de colores</p>
+            <p><b>·</b> Platos y Vasos plásticos colores surtidos (lavables)</p>
+            <p><b>·</b> 1 jugo por niño + papas fritas + barra cereal</p>
+            <p><b>·</b> Piñata + dulces blandos + bolsas para recoger dulces de color</p>
+            <p><b>·</b> 30 sorpresas (más de 15 opciones para elegir) – si necesitas sorpresas adicionales  $1.700 c/u</p>
+            <p><b>·</b> Disco peques (opcional)</p>
+            <p><b>·</b> Café y Té para adultos (tazas, leche, endulzante, azúcar y cuchara)</p>
+            <p><b>·</b> 40 platos,40 vasos, 40 tenedores + servilletas para adultos (vasos plástico, lavables)</p>
+            <p><b>·</b> Incluye: 2 adultos por niño</p>
+            <p><b>·</b> REGALO: 3 entradas gratis para venir a jugar por tiempo ilimitado con una duración 2 meses</p>
+            <p>Puedes traer todo lo adicional que quieras ese día para decorar o comer. La cafetería de RUKAYEN siempre permanece abierta.</p>
+            <p><b>Valores:</b></p>
+            <p><b>Lunes a jueves $345.000</b></p>
+            <p><b>Viernes a Domingo y festivos: $375.000</b></p>
+            <p><b>Niño adicional: $10.000</b></p>
+            <br>
+            <p><b>Horarios:</b></p>
+            <p><b>AM</b>: 11.00 a 13.30 hrs</p>
+            <p><b>PM</b>: lun a juev 16.00 a 18.30 hrs - sab 16.30 hrs</p>
+            <p>IMPORTANTE: EL espacio es para niños de hasta 7 años - DEBES INFORMAR LOS NIÑOS MAYORES QUE ASISTAN, LOS CUALES SE COBRARÁN SI ENTRAN A JUGAR.</p>
+        </div>
+        <button class="col-md-12 col-xs-12 accordion bordes">
+            <b><u>Actividades para Contratar y Adicionales</u></b>
+            <i class="fa fa-plus mas"></i>
+        </button>
+        <div class="panel">
+            <p><b>· Mago</b> entretenido con un show de 30/40 minutos.</p>
+            <p class="parrafo-cumple">Valor $82.000</p>
+            <p><b>· Pintacaritas</b> (tatuajes temporales 2hrs)</p>
+            <p class="parrafo-cumple">Valor $62.000</p>
+            <p><b>·</b> Show de <b>Títeres</b> con canciones, cuento a elección (Títeres Caracol) 40 minutos</p>
+            <p class="parrafo-cumple">Valor $100.000 </p>
+            <p><b>·</b>Muestra de <b>animales</b> hurón, chinchilla, hámster, conejos, cata, dragón barbudo y otros </p>
+            <p class="parrafo-cumple">Valor $82.000</p>
+            <p><b>· Pinta tu polera </b>cada invitado pinta su polera con temperas especiales para tela, se entrega la polera lista para usar en una bolsa transparente </p>
+            <p class="parrafo-cumple">Valor $5.000 x niño</p>
+            <p><b>· Taller de máscaras </b>decoración de máscaras y pulseras </p>
+            <p class="parrafo-cumple">Valor $4.000 x niño </p>
+            <p><b>· Taller de Ciencia </b>desde 4.500 x niño pedir listado de actividades </p>
+            <br>
+            <p><b><u>ADICIONALES Y OTROS:</u></b></p>
+            <p>30 min adicional de cumpleaños $80.000</p>
+            <p>TAPADITOS: 100 unid (2 sabores) + 3 bebidas 2,5 litros $65.000</p>
+            <p>DECORACIÓN TEMÁTICA 30 niños aprox: $65.000 (consultar valor por menos niños)</p>
+            <p>ARRIENDO INFLABLE (SÓLO LOS TRAPENSES) $70.000 (consultar x tipo de inflable y valor)</p>
+            <p>USO PISCINA: sin costo, sólo se debe pagar persona que cuida el acceso a la piscina $35.000</p>
+            <p>USO QUINCHO: pedir presupuesto</p>
+            <br>
+            <p><b><u>SERVICIOS EXTERNOS:</u> si contratas cualquier servicio adicional para traer a RUKAYEN debes cancelar un fee de $30.000</b></p>
+        </div>
+        <button class="col-md-12 col-xs-12 accordion bordes">
+            <b><u>Politicas de Cancelación del Cumpleaños</u></b>
+            <i class="fa fa-plus mas"></i>
+        </button>
+        <div class="panel">
+            <p>Toda cancelación de los servicios contratados que sea efectuada por la Solicitante con 20 días corridos o más de anticipación a la fecha de prestación de los mismos, dará lugar a la devolución del 100% del importe pagado. A su vez, la cancelación que sea efectuada por la solicitante por cualquier motivo con 19 días corridos o menos de anticipación a la fecha de prestación de los servicios, dará lugar a la devolución del 75% del importe pagado. Por último, cualquier cancelación que sea efectuada por la Solicitante con 10 días corridos o menos de anticipación a la fecha de prestación de los servicios, no dará lugar a devolución alguna. Toda cancelación deberá ser comunicada por escrito a francisca@rukayen.cl. A su vez, toda cancelación que se genere por enfermedad del menor para quien se contratan los servicios, facultará a la Solicitante a reprogramar, solo una vez, la prestación de los servicios contratados dentro del plazo de 15 días corridos contados desde la fecha inicial, lo cual, sin embargo, estará sujeto y quedará supeditado a la disponibilidad de RUKAYEN. La situación anterior no dará lugar a reembolso alguno. RUKAYEN se reserva el derecho a solicitar acreditación mediante documento o certificado médico si así lo estimara necesario. Si por cualquier razón RUKAYEN se viera imposibilitada de prestar los servicios contratados, la Solicitante tendrá derecho a la devolución de la totalidad del monto pagado. La Solicitante acepta expresamente en este acto los términos antes indicados, renunciando a cualquier acción o reclamo ulterior que pudiera tener lugar con ocasión de los mismos.</p>
+        </div>
+        <button class="col-md-12 col-xs-12 accordion bordes">
+            <b><u>Término del Cumpleaños</u></b>
+            <i class="fa fa-plus mas"></i>
+        </button>
+        <div class="panel">
+            <p>Una vez finalizado el cumpleaños los invitados tienen 15 minutos para salir de la sala de juegos, pasado este tiempo se cobrará 10.000 pesos cada diez minutos adicionales. El cumpleañero tiene 30 minutos para poder sacar las cosas tranquilamente de la sala de eventos.</p>
+            <p><b>· </b>POR SEGURIDAD LOS GLOBOS SOLO SE PERMITEN PARA DECORACIÓN EN EL 2DO PISO</p>
+            <p><b>· </b>NO SE PUEDE TRAER CHALLA, NI ALCOHOL, NI FUMAR DENTRO DE RUKAYEN</p>
+            <p><b>· </b>NO SE PUEDE INGRESAR A LA SALA CON TACOS O BOTAS DE SUELA DURA</p>
+            <p><b>· </b>NO SE PUEDE CONSUMIR ALIMENTOS O BEBIDAS EN LA SALA DE JUEGO</p>
+            <p><b>· </b>PRECIOS SUJETOS A CAMBIO SIN PREVIO AVISO</p>
+        </div>
+        <button class="col-md-12 col-xs-12 accordion bordes">
+            <b><u>Como hago una reserva</u></b>
+            <i class="fa fa-plus mas"></i>
+        </button>
+        <div class="panel">
+        <p>Con el abono del 50%  una vez confirmada la fecha tienes 48 hrs para realizar el abono a:</p>
+        <p>- Rukayen EIRL</p>
+        <p>- Rut 76.405.733-3</p>
+        <p>- Cta cte BCI 70702900</p> 
+        <p>- <a href="mailto:francisca@rukayen.cl">francisca@rukayen.cl</a></p>
+        <p>Debes enviar un mail con la copia de la reserva, nombre y edad del cumpleañero y tu celular</p>
+
+        </div>
     </div>
-</div>
-{% include '../home/footer.html' %}
+    {% include '../home/footer.html' %}
 {% end %}
 
