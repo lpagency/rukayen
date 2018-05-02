@@ -14,11 +14,6 @@
     margin-left: 9%;
 }
 
-.fix-top
-{
-    top: 53px;
-}
-
 .padding-left-none
 {
     padding-left: 0px;
@@ -1902,7 +1897,7 @@ div.image-upload
     width: 100%;
     height: auto;
     top: 72px;
-    margin-left: -60px;
+    margin-left: 0px;
     margin-bottom: 10px;
 }
 
