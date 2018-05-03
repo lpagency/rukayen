@@ -1920,7 +1920,7 @@ div.image-upload
     top: 53px;
 }
 
-.text_hora>p
+.text_opening>p
 {
     color: white;
     font-size: 20px;
@@ -2018,21 +2018,6 @@ div.image-upload
     -moz-filter: grayscale(0%) brightness(50%);
     -ms-filter: grayscale(0%) brightness(50%);
     -o-filter: grayscale(0%) brightness(50%);
-}
-
-@media (max-width: 1216px)
-{
-    .text_hora>p
-    {
-        color: white;
-        font-size: 18px;
-        text-align: center;
-        z-index: 1030;
-        overflow: hidden;
-        padding-left: 25px;
-        padding-right: 25px;
-        width: 100%;
-    }
 }
 
 @media (min-width: 1200px)
@@ -2272,13 +2257,15 @@ div.image-upload
 {
     .padding-left-none
     {
-        padding-left: 15px;
+        padding-left: 0px;
+        padding-right: 0px;
         left: 0px;
     }
 
     .padding-right-none
     {
-        padding-right: 15px;
+        padding-right: 0px;
+        padding-left: 0px;
     }
 
     .space-menos
@@ -2797,7 +2784,7 @@ div.image-upload
         height: 600px;
     }
 
-    .text_hora
+    .text_opening
     {
         position: relative;
     }
