@@ -1,7 +1,7 @@
 {% extends "../base.html" %}
 
 {% block css %}
-<link rel='stylesheet' href='{{ site_base }}/static/fullcalendar-2.5.0/fullcalendar.css' />
+<link rel='stylesheet' href='{{ site_base }}/{{ nocache_static }}/fullcalendar-2.5.0/fullcalendar.css' />
 <style type='text/css'>
     #calendar {
         width: 90%;
@@ -72,12 +72,12 @@
 
 {% block javascript %}
         <!--Full Calendar-->
-        <!-- // <script src='{{ site_base }}/static/fullcalendar-2.5.0/lib/jquery.min.js'></script> -->
-        <script src='{{ site_base }}/static/fullcalendar-2.5.0/lib/moment.min.js'></script>
-        <script src='{{ site_base }}/static/fullcalendar-2.5.0/fullcalendar.js'></script>
-        <script src='{{ site_base }}/static/fullcalendar-2.5.0/lang-all.js'></script>
-        <script src='{{ site_base }}/static/fullcalendar-2.5.0/gcal.js'></script>
-        <script src='{{ site_base }}/static/js/calendar.js'></script>
+        <!-- // <script src='{{ site_base }}/{{ nocache_static }}/fullcalendar-2.5.0/lib/jquery.min.js'></script> -->
+        <script src='{{ site_base }}/{{ nocache_static }}/fullcalendar-2.5.0/lib/moment.min.js'></script>
+        <script src='{{ site_base }}/{{ nocache_static }}/fullcalendar-2.5.0/fullcalendar.js'></script>
+        <script src='{{ site_base }}/{{ nocache_static }}/fullcalendar-2.5.0/lang-all.js'></script>
+        <script src='{{ site_base }}/{{ nocache_static }}/fullcalendar-2.5.0/gcal.js'></script>
+        <script src='{{ site_base }}/{{ nocache_static }}/js/calendar.js'></script>
         <!--End Full Calendar-->
         <script type="text/javascript" >
         

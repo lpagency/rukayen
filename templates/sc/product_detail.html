@@ -11,7 +11,7 @@
 {% end %}
 
 {% block javascript %}
-        <script src="{{ site_base }}/static/js/detalle-producto.js"></script>
+        <script src="{{ site_base }}/{{ nocache_static }}/js/detalle-producto.js"></script>
         <!-- <script type="text/javascript" src="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.js"></script> -->
 
         <script type="text/x-template" id = "product_template" > </script> 
@@ -216,7 +216,7 @@
         <div class="image-upload">
             <!-- id input debe ir en for de label -->
             <label for="{{ site.name }}_banner_detalle">
-            <img class="change-image" src="{{ site_base }}/static/img/btn-edit.png" onmouseover="this.src='{{ site_base }}/static/img/btn-edit-hover.png';" onmouseout="this.src='{{ site_base }}/static/img/btn-edit.png';">
+            <img class="change-image" src="{{ site_base }}/{{ nocache_static }}/img/btn-edit.png" onmouseover="this.src='{{ site_base }}/{{ nocache_static }}/img/btn-edit-hover.png';" onmouseout="this.src='{{ site_base }}/{{ nocache_static }}/img/btn-edit.png';">
             </label>
             <input type="file" class="editableimage" image-id="{{ site.name }}_banner_detalle" name="image" id="{{ site.name }}_banner_detalle" >
         </div>
