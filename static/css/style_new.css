@@ -2126,6 +2126,11 @@ div.image-upload
         position: relative;
         top: 25px;
     }
+
+    .home-header
+    {
+        height: 39px;
+    }
 }
 
 @media (max-width: 900px)
