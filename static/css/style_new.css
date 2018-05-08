@@ -2126,11 +2126,6 @@ div.image-upload
         position: relative;
         top: 25px;
     }
-
-    .home-header
-    {
-        height: 39px;
-    }
 }
 
 @media (max-width: 900px)
@@ -2393,7 +2388,7 @@ div.image-upload
         background: #BDBDBD;
         font-size: 13px;
         width: 166px;
-        height: 34px;
+        height: 39px;
     }
 
     .menu-drop-rukayen
