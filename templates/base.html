@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <!-- head bt inicio -->
         <title>Rukayen - Juegos, Cumpleaños y Café </title>
@@ -10,12 +9,9 @@
         <meta property="og:image" content="https://7static.loadingplay.com/static/images/66762ebd46d9262a9cf973f9f01b6090_rukayen_fb.png" />
         <meta property="og:description" content="Una casa de juego por hora, celebración de cumpleaños, talleres para niños de 3 meses a 6 años. Tenemos cafetería, wifi, estacionamiento gratis.">
         <meta name="google-site-verification" content="iwxOHzNjfTFj_miY4o4FQVFvyMWBk_tMyQblyVl_rKY" />
-
-
         <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
         <link rel="stylesheet" href="{{ site_base }}/{{ nocache_static }}/cssbt/style.css?22">
         <link rel="stylesheet" href="{{ site_base }}/{{ nocache_static }}/cssbt/icomoon/style.css?22">
         <link rel="stylesheet" type="text/css" href="{{ site_base }}/{{ nocache_static }}/css/me.css?22">
@@ -38,7 +34,6 @@
         <link rel="stylesheet" href="{{ site_base }}/{{ nocache_static }}/css/gallery.css?22">
         <!-- Link Swiper's CSS -->
         <link rel="stylesheet" href="{{ site_base }}/{{ nocache_static }}/css/swiper.min.css?22">
-
         <!-- autocomplete -->
         <link rel="stylesheet" type="text/css" href="{{ site_base }}/{{ nocache_static }}/js/plugins/selectize/selectize.css" />
         <!-- autocomplete -->
@@ -53,14 +48,11 @@
 
         {% block css %}{% end %}
 
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
         <style> 
-        [data-sr] { visibility: hidden; } 
+            [data-sr] { visibility: hidden; } 
         </style>
     </head>
+
     <body id="home">
         <!-- generar contenido y formularios -->
         <div id="menu_movil" class="descripcion_wrapper descripcion_opacity b_wrapper" style="display:none;">
@@ -74,7 +66,6 @@
         <!-- generar contenido y formularios -->
         <div id="cuerpo" style="width: 100%">
             <!-- editor menu -->
-            <!-- <button class="button-nav-toggle" style="width:40px;height:40px;"></button> -->
             <div class="menu">
                 <nav class="nav-main">
                     <div class="nav-container">
@@ -94,7 +85,6 @@
                                 <ul>
                                     <li class="menu-ti"> <a href="#" class="back"><strong>Logo</strong></a></li>
                                     <button class="btn-menu">Subir imagen</button>
-                                    <!-- <input class="" type="file" name="imagen" id="imagen" /> -->
                                 </ul>
                             </li>
                             <li class="menu-st">Contenedor</li>
@@ -162,81 +152,48 @@
             </div>
         </div>
 
-
-
-
-        <!-- editor menu -->
-        <!-- header -->
-        <!-- header fixed inicio-->
-<!--         <div id="main-nav-fixed-navigation" class="fixed-menu-me">
-            <div class="container-fluid-magle" style="display: block;">
-                <a href="{{ site_base }}" class="nav-brand" style="border:0px;text-align: left; ">
-                 <img class="mlb-logo-header" src="{{ read_image(site.name + '_logo_header') }}" class="img-responsive" alt="item">
-                </a>
-                <i class="fa icon-shopping-cart " data-toggle="modal" data-target="#myModal" style="  color: black; float: right; font-size: 28px; padding: 4px; margin-left: 20px;"></i>
-            </div>
-        </div> -->
-        <!-- header fixed fin-->
-
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" role="dialog">
-                <div class="modal-dialog">
-
-                  <!-- Modal content-->
-                  <div class="modal-content">
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
                     <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      <h4 class="modal-title ">Resumen de tu compra</h4>
-                  </div>
-                  <div class="modal-body mlb-btn">                                 
-                      {% include 'page/cart.html' %}
-                  </div>
-    <!--                         <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  </div> -->
-              </div>
-
-          </div>
-      </div>
-
-        <!--page reserve Modal -->
-<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-     
-      </div>
-          <div class="modal-body text-center">
-            <div class="row">
-                <div class="col-md-12">
-                    <h4 >
-                        <strong>Ya esta hecha tu reserva!</strong>
-                    </h4>
-
-                    <p class="reserva text-center">
-                        Esta reserva tiene una duracion de 48 horas a partir de Ahora
-
-                    </p>
-
-                    <p class="reserva space20 text-center">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br> when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    </p>
-
-
-                            <div class="reserve space20 text-center">
-                                <button class="reservebtn whiteclr text-center">
-                                    
-                                        Pagar de inmediato
-                                    
-                                </button>
-                            </div>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title ">Resumen de tu compra</h4>
+                    </div>
+                    <div class="modal-body mlb-btn">
+                        {% include 'page/cart.html' %}
+                    </div>
                 </div>
             </div>
         </div>
-       </div>
-    </div>
-</div>
+
+        <!--page reserve Modal -->
+        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4 >
+                                    <strong>Ya esta hecha tu reserva!</strong>
+                                </h4>
+                                <p class="reserva text-center">
+                                    Esta reserva tiene una duracion de 48 horas a partir de Ahora
+                                </p>
+                                <div class="reserve space20 text-center">
+                                    <button class="reservebtn whiteclr text-center">
+                                        Pagar de inmediato
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         {% block header %}{% end %}
         <!-- header -->
@@ -246,8 +203,6 @@
         <!-- gif loading editableimage -->
         <img id="imgLOAD" width="50" height="50" src="{{ site_base }}/common/css/loading.gif" />
 
-        <!-- <script src="{{ site_base }}/{{ nocache_static }}/js/rimages.js"></script> -->
-        <!--<script src="{{ site_base }}/{{ nocache_static }}/js/fix_ie9.js"></script>-->
         <script type="text/javascript">
         var site_base = "{{ site_base }}"
         </script>
@@ -260,16 +215,12 @@
 
         <script type="text/javascript" src="{{ site_base }}/{{ nocache_static }}/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
 
-        <!--<script src="{{ site_base }}/{{ nocache_static }}/js/giani_functions.js"></script>-->
-        <!--<script src="{{ site_base }}/{{ nocache_static }}/js/giani.js"></script>-->
         <!-- bt inicio -->
         <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="{{ site_base }}/{{ nocache_static }}/jsbt/placeholders.min.js"></script>
         <!--<script type="text/javascript" src="{{ site_base }}/{{ nocache_static }}/jsbt/custom.js"></script>-->
         <script type="text/javascript" src="{{ site_base }}/{{ nocache_static }}/jsbt/ga.js"></script>
-        <!-- bt fin -->
-        <!-- menu editor js -->
-        <!--<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+
         <script src="{{ site_base }}/{{ nocache_static }}/menu/js/modernizr.js"></script>
         <script src="{{ site_base }}/{{ nocache_static }}/menu/js/main.js"></script>
         <script src="{{ site_base }}/{{ nocache_static }}/menu/js/WallopSlider.js"></script>
@@ -278,10 +229,7 @@
         <!-- swipper -->
         <!-- Swiper JS -->
         <script src="{{ site_base }}/{{ nocache_static }}/js/swiper.min.js"></script>
-        <!-- menu editor js -->
-        <!--<script src="{{ site_base }}/{{ nocache_static }}/js/menu-material-2.js"></script>-->
-        <!--<script type="text/javascript" src="{{ site_base }}/{{ nocache_static }}/js/ligthbox-d.js"></script>-->
-        <!-- js mlb -->
+
         <script type="text/javascript" src="{{ site_base }}/{{ nocache_static }}/js/mlb.js"></script>
         <!-- js mlb -->
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
@@ -318,29 +266,31 @@
         </script>
         <script src="https://maps.googleapis.com/maps/api/js"></script>
         <script>
-            if($("#map-canvas").length){
-              function initialize() {
-                var mapCanvas = document.getElementById('map-canvas');
-                var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-                var mapOptions = {
-
-                  center: new google.maps.LatLng(-33.3816729, -70.55256029999998),
-                  zoom: 18,
-                  mapTypeId: google.maps.MapTypeId.ROADMAP,
-
+            if($("#map-canvas").length)
+            {
+                function initialize()
+                {
+                    var mapCanvas = document.getElementById('map-canvas');
+                    var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+                    var mapOptions =
+                    {
+                        center: new google.maps.LatLng(-33.3816729, -70.55256029999998),
+                        zoom: 18,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    }
+                    var map = new google.maps.Map(mapCanvas, mapOptions)
                 }
-                var map = new google.maps.Map(mapCanvas, mapOptions)
-              }
-              google.maps.event.addDomListener(window, 'load', initialize);
+                google.maps.event.addDomListener(window, 'load', initialize);
             }
         </script>
         <style>
-          #map-canvas {
-        width: 50%;
-        height: 400px;
-        z-index: 1;
-        float: right;
-        }
+            #map-canvas
+            {
+                width: 50%;
+                height: 400px;
+                z-index: 1;
+                float: right;
+            }
         </style>
         <!-- conexion con bodegas -->
         <script type="text/javascript" src="{{ site_base }}/{{ nocache_static }}/js/plugins/jquery.lazyload.js"></script>
@@ -349,127 +299,102 @@
         <script type="text/javascript" src="{{ site_base }}/{{ nocache_static }}/js/rukayen.js" ></script>
         <script type="text/javascript" src="{{ site_base }}/common/js/bodegas2/bodegas.client.js?12"></script>
 
-<!--         <div type="template" id="product_loading" style="display:none;" >
-            <div class="spinner">
-                <div class="rect1"></div>
-                <div class="rect2"></div>
-                <div class="rect3"></div>
-                <div class="rect4"></div>
-                <div class="rect5"></div>
-            </div>
-        </div> -->
-<script type="text/javascript">
-        $('ul.nav div.dropdown').hover(function() 
-        {
-            $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(300);
-        }, function() 
-        {
-            $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(300);
-        });
-    </script>
+        <script type="text/javascript">
+            $('ul.nav div.dropdown').hover(function() 
+            {
+                $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(300);
+            }, function() 
+            {
+                $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(300);
+            });
+        </script>
         <div type="template" id="product_template" class="hidden">
             <div class="box space20"> 
-                    <!-- <div class="row "> -->
-                    <a href="{{ site_base }}/sc/product/detail/{{! name|friendly }}/{{! id }}">
-                        
-                        <div class="col-md-4 text-center height-product">
-                          <div class="container-fluid-new">
-                              <div class="row-fluid-new opaque-background">
-                                  <div class="offset3 span6 centering">
-                                      {{! name }}
-                                      <div class="fsize14">{{! bullet_1 }}</div>
-                                  </div>
-                              </div>
-                          </div>
+                <a href="{{ site_base }}/sc/product/detail/{{! name|friendly }}/{{! id }}">
+                    <div class="col-md-4 text-center height-product">
+                        <div class="container-fluid-new">
+                            <div class="row-fluid-new opaque-background">
+                                <div class="offset3 span6 centering">
+                                    {{! name }}
+                                    <div class="fsize14">{{! bullet_1 }}</div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="div-img-prod">
-                        <img src="{{! images[0]['thumb_1'] }}" class="product-image img-edit" alt="item">
-
-                     
+                            <img src="{{! images[0]['thumb_1'] }}" class="product-image img-edit" alt="item">
                         </div>
-                            
-                        </div>
-                        </a>
-                        <!-- <div class="text-name text-center"><p>{{! name }}</p></div> -->
-<!--                         <div class="col-md-6">
-                            <h2>{{! name }}</h2>
-                            <p>{{! description }}</p>
-                                <div class="space100"></div>
-                            <a href="{{! bullet_1 }}"><button class="btn line-button">Shop online</button></a>
-                            <a href="{{ site_base }}/sc/product/detail/{{! name|friendly }}/{{! id }}">
-                            <button class="btn line-button">Where I can buy</button>
-                            </a>
-                        </div> -->
-                    <!-- </div> -->
-                </div>
+                    </div>
+                </a>
+            </div>
         </div>
 
         <!-- fin conexion con bodegas -->
-
         {% block javascript %}{% end %}
 
-        <!--<script type="text/javascript" src="{{ site_base }}/{{ nocache_static }}/js/content/set_fixed.js"></script>-->
-        <!--<script type="text/javascript" src="{{ site_base }}/{{ nocache_static }}/js/tags.js" ></script>-->
         <script type="text/javascript">
-        $('#picker').colpick({
-            flat: true,
-            layout: 'hex',
-            submit: 0
-        });
+            $('#picker').colpick(
+            {
+                flat: true,
+                layout: 'hex',
+                submit: 0
+            });
         </script>
         <script>
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId: '348231912006000',
-                xfbml: true,
-                version: 'v2.1'
-            });
-        };
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {
-                return;
-            }
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+            window.fbAsyncInit = function()
+            {
+                FB.init({
+                    appId: '348231912006000',
+                    xfbml: true,
+                    version: 'v2.1'
+                });
+            };
+            (function(d, s, id)
+            {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id))
+                {
+                    return;
+                }
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
         </script>
         <script type="text/javascript" src="{{ site_base }}/{{ nocache_static }}/js/header.js" ></script>
         <script src="{{ site_base }}/{{ nocache_static }}/js/scrollReveal.min.js?ver=2.1.0"></script>
         <script type="text/javascript">
-
             window.sr= new scrollReveal({ 
                 reset: true,
                 move:"20px" 
             });
         </script>
 
-    <!-- Initialize Swiper -->
-    <script>
-    setTimeout(function() {
-        var swiper = new Swiper('.swiper-container', {
-            pagination: '.swiper-pagination',
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            slidesPerView: 1,
-            paginationClickable: true,
-            spaceBetween: 0,
-            loop: true,
-        });
-    }, 3000);
-    </script>
+        <!-- Initialize Swiper -->
+        <script>
+            setTimeout(function()
+            {
+                var swiper = new Swiper('.swiper-container',
+                {
+                    pagination: '.swiper-pagination',
+                    nextButton: '.swiper-button-next',
+                    prevButton: '.swiper-button-prev',
+                    slidesPerView: 1,
+                    paginationClickable: true,
+                    spaceBetween: 0,
+                    loop: true,
+                });
+            }, 3000);
+        </script>
 
-    <script type="text/javascript">
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        <script type="text/javascript">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        ga('create', '{{ get_config("analytics") }}', 'auto');
-        ga('send', 'pageview');
-    </script>
-
-
+            ga('create', '{{ get_config("analytics") }}', 'auto');
+            ga('send', 'pageview');
+        </script>
     </body>
 </html>
