@@ -2364,6 +2364,11 @@ div.image-upload
         bottom: 95px;
     }
 
+    .bordes
+    {
+        font-size: 10px;
+    }
+
     .panel-visible
     {
         top: 55px;
