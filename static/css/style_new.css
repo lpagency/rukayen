@@ -133,17 +133,17 @@ button.accordion:hover
     overflow: hidden;
 }
 
-.txt-col
+.txt-column-container
 {
     height: 500px;
 }
 
-.txt-col-l
+.txt-column-container-left
 {
     background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,1));
 }
 
-.txt-col-r
+.txt-column-container-right
 {
     background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1));
 }
