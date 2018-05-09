@@ -107,6 +107,13 @@
     width: 100%;
     height: 138px;
     overflow: hidden;
+    position: relative;
+    top: 29px;
+}
+
+.margin-div-toggle
+{
+    margin: 0px 60px;
 }
 
 .panel-visible
@@ -115,6 +122,9 @@
     width: 100%;
     height: inherit;
     overflow: inherit;
+    top: 35px;
+    position: relative;
+    margin-bottom: 36px;
 }
 
 button.accordion:hover
@@ -128,14 +138,17 @@ button.accordion:hover
     color: white;
     padding-top: 35px;
     text-align: center;
-    max-height: 300px;
-    min-height: 300px;
+    max-height: 135px;
+    min-height: 135px;
+    font-size: 30px;
+    text-transform: uppercase;
     overflow: hidden;
+    margin-top: 75px;
 }
 
 .txt-column-container
 {
-    height: 500px;
+    height: 400px;
 }
 
 .txt-column-container-left
@@ -156,7 +169,9 @@ button.accordion:hover
 button.btn-more
 {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 30px;
+    padding: 16px 30px;
+    font-size: 18px;
 }
 
 .col-btn
@@ -2346,6 +2361,17 @@ div.image-upload
     .con2
     {
         bottom: 95px;
+    }
+
+    .panel-visible
+    {
+        top: 55px;
+        margin-bottom: 60px;
+    }
+
+    .panel-hidden
+    {
+        top: 50px;
     }
 
     .img-logo
