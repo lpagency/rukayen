@@ -2,34 +2,8 @@
 {
     position: relative;
     height: 500px;
-}
-
-.banner-1
-{
-    top: 90px;
-}
-
-.banner-2
-{
-    top: 41px;
-}
-
-.banner-3
-{
-    top: -8px;
-}
-
-.banner-4
-{
-    top: -55px;
-}
-
-.banner-5
-{
-    position: relative;
-    top: -102px;
-    height: 400px;
-    margin-bottom: -80px;
+    background-size: cover !important;
+    margin-bottom: 30px;
 }
 
 .parrafo-cumple
