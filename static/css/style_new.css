@@ -2178,6 +2178,11 @@ div.image-upload
         font-size: 30px;
     }
 
+    .align-right
+    {
+        float: inherit;
+    }
+
     .banner-cumple
     {
         position: relative;
