@@ -113,7 +113,8 @@
 
 .margin-div-toggle
 {
-    margin: 0px 60px;
+    margin: 0px 60px 30px;
+    overflow: hidden;
 }
 
 .panel-visible
@@ -2361,6 +2362,11 @@ div.image-upload
     .con2
     {
         bottom: 95px;
+    }
+
+    .bordes
+    {
+        font-size: 10px;
     }
 
     .panel-visible
