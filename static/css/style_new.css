@@ -138,8 +138,8 @@ button.accordion:hover
     color: white;
     padding-top: 35px;
     text-align: center;
-    max-height: 135px;
-    min-height: 135px;
+    max-height: 140px;
+    min-height: 140px;
     font-size: 30px;
     text-transform: uppercase;
     overflow: hidden;
