@@ -108,7 +108,7 @@
     height: 138px;
     overflow: hidden;
     position: relative;
-    top: 29px;
+    top: 15px;
 }
 
 .margin-div-toggle
@@ -123,8 +123,8 @@
     width: 100%;
     height: inherit;
     overflow: inherit;
-    top: 35px;
     position: relative;
+    top: 15px;
     margin-bottom: 36px;
 }
 
@@ -2324,6 +2324,7 @@ div.image-upload
         width: 100%;
         height: 310px;
     }
+
     .article-img
     {
         margin: 15px;
@@ -2371,13 +2372,7 @@ div.image-upload
 
     .panel-visible
     {
-        top: 55px;
         margin-bottom: 60px;
-    }
-
-    .panel-hidden
-    {
-        top: 50px;
     }
 
     .img-logo
