@@ -113,7 +113,8 @@
 
 .margin-div-toggle
 {
-    margin: 0px 60px;
+    margin: 0px 60px 30px;
+    overflow: hidden;
 }
 
 .panel-visible
