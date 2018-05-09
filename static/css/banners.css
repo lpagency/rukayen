@@ -1,9 +1,9 @@
 .banners-cumple
 {
     position: relative;
-    height: 500px;
+    height: 400px;
     background-size: cover !important;
-    margin-bottom: 30px;
+    margin: 0px 60px 30px 60px;
 }
 
 .parrafo-cumple

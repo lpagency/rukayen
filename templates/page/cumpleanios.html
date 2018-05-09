@@ -76,7 +76,7 @@
             <img id="{{ site.name }}_cumple_1" src="{{ read_image(site.name + '_cumple_1', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_cumple_1', 500) }}'" class="hidden" alt="item">
             <div class="col-md-6 txt-column-container txt-column-container-left">
                 <div align="center" class="{{editabletext}} txt-a-title col-md-12" text-id="{{ site.name + '_txt_cumple_1' }}">{{ read_text(site.name + '_txt_cumple_1') }}</div>
-                <div class="col-md-12 col-btn">
+                <div class="col-md-offset-3 col-md-6 col-btn">
                     <button id="{{ site.name + '_btn_cumple_1' }}" class="btn-more" onclick="location.href='{{ read_link(site.name + '_btn_cumple_1') }}'">VER MAS</button>
                 </div>
                 {% if is_admin %}
@@ -97,7 +97,7 @@
             <img id="{{ site.name }}_cumple_2" src="{{ read_image(site.name + '_cumple_2', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_cumple_2', 500) }}'" class="hidden" alt="item">
             <div class="col-md-6 txt-column-container txt-column-container-right align-right">
                 <div align="center" class="{{editabletext}} txt-a-title col-md-12" text-id="{{ site.name + '_txt_cumple_2' }}">{{ read_text(site.name + '_txt_cumple_2') }}</div>
-                <div class="col-md-12 col-btn">
+                <div class="col-md-offset-3 col-md-6 col-btn">
                     <button id="{{ site.name + '_btn_cumple_2' }}" class="btn-more" onclick="location.href='{{ read_link(site.name + '_btn_cumple_2') }}'">VER MAS</button>
                 </div>
                 {% if is_admin %}
@@ -118,7 +118,7 @@
             <img id="{{ site.name }}_cumple_3" src="{{ read_image(site.name + '_cumple_3', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_cumple_3', 500) }}'" class="hidden" alt="item">
             <div class="col-md-6 txt-column-container txt-column-container-left">
                 <div align="center" class="{{editabletext}} txt-a-title col-md-12" text-id="{{ site.name + '_txt_cumple_3' }}">{{ read_text(site.name + '_txt_cumple_3') }}</div>
-                <div class="col-md-12 col-btn">
+                <div class="col-md-offset-3 col-md-6 col-btn">
                     <button id="{{ site.name + '_btn_cumple_3' }}" class="btn-more" onclick="location.href='{{ read_link(site.name + '_btn_cumple_3') }}'">VER MAS</button>
                 </div>
                 {% if is_admin %}
@@ -139,7 +139,7 @@
             <img id="{{ site.name }}_cumple_4" src="{{ read_image(site.name + '_cumple_4', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_cumple_4', 500) }}'" class="hidden" alt="item">
             <div class="col-md-6 txt-column-container txt-column-container-right align-right">
                 <div align="center" class="{{editabletext}} txt-a-title col-md-12" text-id="{{ site.name + '_txt_cumple_4' }}">{{ read_text(site.name + '_txt_cumple_4') }}</div>
-                <div class="col-md-12 col-btn">
+                <div class="col-md-offset-3 col-md-6 col-btn">
                     <button id="{{ site.name + '_btn_cumple_4' }}" class="btn-more" onclick="location.href='{{ read_link(site.name + '_btn_cumple_4') }}'">VER MAS</button>
                 </div>
                 {% if is_admin %}
@@ -160,7 +160,7 @@
             <img id="{{ site.name }}_cumple_5" src="{{ read_image(site.name + '_cumple_5', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_cumple_5', 500) }}'" class="hidden" alt="item">
             <div class="col-md-6 txt-column-container txt-column-container-left">
                 <div align="center" class="{{editabletext}} txt-a-title col-md-12" text-id="{{ site.name + '_txt_cumple_5' }}">{{ read_text(site.name + '_txt_cumple_5') }}</div>
-                <div class="col-md-12 col-btn">
+                <div class="col-md-offset-3 col-md-6 col-btn">
                     <button id="{{ site.name + '_btn_cumple_5' }}" class="btn-more" onclick="location.href='{{ read_link(site.name + '_btn_cumple_5') }}'">VER MAS</button>
                 </div>
                 {% if is_admin %}
@@ -168,7 +168,7 @@
                 {% end %}
             </div>
         </div>
-        <div>
+        <div class="margin-div-toggle">
             <button class="col-md-12 col-xs-12 accordion bordes">
                 <b><u>Cumpleaños Abierto 15 niños + Cumpleañero</u></b>
                 <i class="fa fa-plus mas"></i>
@@ -200,7 +200,7 @@
                 <p>IMPORTANTE: EL espacio es para niños de hasta 7 años - DEBES INFORMAR LOS NIÑOS MAYORES QUE ASISTAN, LOS CUALES SE COBRARÁN SI ENTRAN A JUGAR.</p>
             </div>
         </div>
-        <div>
+        <div class="margin-div-toggle">
             <button class="col-md-12 col-xs-12 accordion bordes">
                 <b><u>Cumpleaños Exclusivo 30 niños</u></b>
                 <i class="fa fa-plus mas"></i>
@@ -233,7 +233,7 @@
                 <p>IMPORTANTE: EL espacio es para niños de hasta 7 años - DEBES INFORMAR LOS NIÑOS MAYORES QUE ASISTAN, LOS CUALES SE COBRARÁN SI ENTRAN A JUGAR.</p>
             </div>
         </div>
-        <div>
+        <div class="margin-div-toggle">
             <button class="col-md-12 col-xs-12 accordion bordes">
                 <b><u>Actividades para Contratar y Adicionales</u></b>
                 <i class="fa fa-plus mas"></i>
@@ -264,7 +264,7 @@
                 <p><b><u>SERVICIOS EXTERNOS:</u> si contratas cualquier servicio adicional para traer a RUKAYEN debes cancelar un fee de $30.000</b></p>
             </div>
         </div>
-        <div>
+        <div class="margin-div-toggle">
             <button class="col-md-12 col-xs-12 accordion bordes">
                 <b><u>Politicas de Cancelación del Cumpleaños</u></b>
                 <i class="fa fa-plus mas"></i>
@@ -273,7 +273,7 @@
                 <p>Toda cancelación de los servicios contratados que sea efectuada por la Solicitante con 20 días corridos o más de anticipación a la fecha de prestación de los mismos, dará lugar a la devolución del 100% del importe pagado. A su vez, la cancelación que sea efectuada por la solicitante por cualquier motivo con 19 días corridos o menos de anticipación a la fecha de prestación de los servicios, dará lugar a la devolución del 75% del importe pagado. Por último, cualquier cancelación que sea efectuada por la Solicitante con 10 días corridos o menos de anticipación a la fecha de prestación de los servicios, no dará lugar a devolución alguna. Toda cancelación deberá ser comunicada por escrito a francisca@rukayen.cl. A su vez, toda cancelación que se genere por enfermedad del menor para quien se contratan los servicios, facultará a la Solicitante a reprogramar, solo una vez, la prestación de los servicios contratados dentro del plazo de 15 días corridos contados desde la fecha inicial, lo cual, sin embargo, estará sujeto y quedará supeditado a la disponibilidad de RUKAYEN. La situación anterior no dará lugar a reembolso alguno. RUKAYEN se reserva el derecho a solicitar acreditación mediante documento o certificado médico si así lo estimara necesario. Si por cualquier razón RUKAYEN se viera imposibilitada de prestar los servicios contratados, la Solicitante tendrá derecho a la devolución de la totalidad del monto pagado. La Solicitante acepta expresamente en este acto los términos antes indicados, renunciando a cualquier acción o reclamo ulterior que pudiera tener lugar con ocasión de los mismos.</p>
             </div>
         </div>
-        <div>
+        <div class="margin-div-toggle">
             <button class="col-md-12 col-xs-12 accordion bordes">
                 <b><u>Término del Cumpleaños</u></b>
                 <i class="fa fa-plus mas"></i>
@@ -287,7 +287,7 @@
                 <p><b>· </b>PRECIOS SUJETOS A CAMBIO SIN PREVIO AVISO</p>
             </div>
         </div>
-        <div>
+        <div class="margin-div-toggle">
             <button class="col-md-12 col-xs-12 accordion bordes">
                 <b><u>Como hago una reserva</u></b>
                 <i class="fa fa-plus mas"></i>
