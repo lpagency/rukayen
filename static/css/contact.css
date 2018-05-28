@@ -10,6 +10,14 @@
     padding: 2px;
 }
 
+.contact-div
+{
+    background-color: #0B610B;
+    color: white;
+    height: 200px;
+    position: relative;
+}
+
 .contact-display
 {
     display: inherit;
