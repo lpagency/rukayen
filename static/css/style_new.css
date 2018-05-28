@@ -29,22 +29,6 @@
     position: relative;
 }
 
-.contact-display
-{
-    display: inherit;
-}
-
-.contact-title
-{
-    position: relative;
-    top: 120px;
-}
-
-.contact-margin
-{
-    margin-top: 0;
-}
-
 .div-movil
 {
     padding-top: 5px;
