@@ -30,8 +30,7 @@
             {
                 if(!$.trim($(".message-text").val()))
                 {
-                    alert("El campo mensaje esta vacio");
-                    return false;
+                    $(".message-text").removeAttr("value");
                 }
             });
         });
