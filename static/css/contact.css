@@ -1,0 +1,35 @@
+.controls input,
+.controls textarea
+{
+    padding: 10px 16px;
+}
+
+.col-sm-6,
+.col-sm-12
+{
+    padding: 2px;
+}
+
+.contact-div
+{
+    background-color: #0B610B;
+    color: white;
+    height: 200px;
+    position: relative;
+}
+
+.contact-display
+{
+    display: inherit;
+}
+
+.contact-title
+{
+    position: relative;
+    top: 120px;
+}
+
+.contact-margin
+{
+    margin-top: 0;
+}
