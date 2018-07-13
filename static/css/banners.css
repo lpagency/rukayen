@@ -4,9 +4,38 @@
     height: 400px;
     background-size: cover !important;
     margin: 0px 60px 30px 60px;
+        -webkit-filter: grayscale(0%) brightness(95%);
+    -moz-filter: grayscale(0%) brightness(95%);
+    -ms-filter: grayscale(0%) brightness(95%);
+    -o-filter: grayscale(0%) brightness(95%);
 }
 
 .parrafo-cumple
 {
     margin-left: 30px;
+}
+
+
+.img-cumple-info {
+    object-fit: cover;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 0px 60px 30px 60px;
+    z-index: -1;
+    filter: grayscale(0%) brightness(99%);
+    -webkit-filter: grayscale(0%) brightness(99%);
+    -moz-filter: grayscale(0%) brightness(99%);
+    -ms-filter: grayscale(0%) brightness(99%);
+    -o-filter: grayscale(0%) brightness(99%);
+}
+
+.txt-column-container {
+    position: absolute;
+    top: 0;
+    height: 400px;
+}
+.align-right {
+    right: 0;
 }
