@@ -5,8 +5,8 @@
 {% end %}
 
 {% block css %}
-    <link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css?22" />
-    <link rel="stylesheet" type="text/css" href="{{ site_base }}/{{ nocache_static }}/css/banners.css?22">
+    <link rel="stylesheet" type="text/css" href="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.css?23" />
+    <link rel="stylesheet" type="text/css" href="{{ site_base }}/{{ nocache_static }}/css/banners.css?23">
 {% end %}
 
 {% block javascript %}
@@ -161,21 +161,17 @@
             </div>
         {% end %}
         <img id="{{ site.name }}_cumple_5" src="{{ read_image(site.name + '_cumple_5', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_cumple_5', 500) }}'" class="img-responsive img-cumple-info" alt="item" style="height: 100%;">
-        <div class="col-md-6 txt-column-container txt-column-container txt-column-container-left">
-                <div align="center" class="{{editabletext}} txt-a-title col-md-12" text-id="{{ site.name + '_txt_cumple_5' }}">{{ read_text(site.name + '_txt_cumple_5') }}</div>
-                <div class="col-md-offset-3 col-md-6 col-btn">
-                    <button id="{{ site.name + '_btn_cumple_5' }}" class="btn-more" onclick="location.href='{{ read_link(site.name + '_btn_cumple_5') }}'">VER MAS</button>
-                </div>
-                {% if is_admin %}
-                    <img class="change-image editablelink link-btn" link-id="{{ site.name + '_btn_cumple_5' }}" content="{{ read_link(site.name + '_btn_cumple_5') }}" src="{{ site_base }}/{{ nocache_static }}/img/link.png" onmouseover="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" onmouseout="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';">
-                {% end %}
+        <div class="col-md-6 txt-column-container txt-column-container-right align-right">
+            <div align="center" class="{{editabletext}} txt-a-title col-md-12" text-id="{{ site.name + '_txt_cumple_5' }}">{{ read_text(site.name + '_txt_cumple_5') }}</div>
+            <div class="col-md-offset-3 col-md-6 col-btn">
+                <button id="{{ site.name + '_btn_cumple_5' }}" class="btn-more" onclick="location.href='{{ read_link(site.name + '_btn_cumple_5') }}'">VER MAS</button>
             </div>
-                {% if is_admin %}
-                    <img class="change-image editablelink link-btn" link-id="{{ site.name + '_btn_cumple_5' }}" content="{{ read_link(site.name + '_btn_cumple_5') }}" src="{{ site_base }}/{{ nocache_static }}/img/link.png" onmouseover="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" onmouseout="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';">
-                {% end %}
-            </div>
+            {% if is_admin %}
+                <img class="change-image editablelink link-btn" link-id="{{ site.name + '_btn_cumple_5' }}" content="{{ read_link(site.name + '_btn_cumple_5') }}" src="{{ site_base }}/{{ nocache_static }}/img/link.png" onmouseover="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';" onmouseout="this.src='{{ site_base }}/{{ nocache_static }}/img/link.png';">
+            {% end %}
         </div>
-        <div class="container">
+    </div>
+        <div class="container preguntas">
             <div class="margin-div-toggle">
                 <button class="col-md-12 col-xs-12 accordion bordes">
                     <b><u>Cumpleaños Abierto 15 niños + Cumpleañero</u></b>
