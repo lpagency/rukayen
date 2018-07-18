@@ -143,7 +143,7 @@
 
     .txt-column-container-left 
     {
-    left: 0%;
+        left: 0%;
     }
 
     .txt-a-title 
@@ -152,6 +152,7 @@
         font-size: 20px;
         margin-top: 25px;
     }
+    
     button.btn-more 
     {
         width: 75%;
