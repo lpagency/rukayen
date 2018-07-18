@@ -147,28 +147,7 @@ button.accordion:hover
     overflow: hidden;
     margin-top: 75px;
 }
-/*
-.txt-column-container
-{
-    height: 400px;
-}
 
-.txt-column-container-left
-{
-    background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,1));
-}
-
-.txt-column-container-right
-{
-    background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1));
-}
-
-
-.align-right
-{
-    float: right;
-}
-*/
 button.btn-more
 {
     width: 100%;
