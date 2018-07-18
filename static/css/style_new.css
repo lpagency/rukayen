@@ -103,18 +103,19 @@
 
 .panel-hidden
 {
-    max-height: 138px;
     width: 100%;
-    height: 138px;
     overflow: hidden;
     position: relative;
     top: 15px;
+    height: 0px;
 }
 
-.margin-div-toggle
+.margin-div-toggle 
 {
-    margin: 0px 60px 30px;
+    margin: 0px 60px;
     overflow: hidden;
+    position: relative;
+    right: 1%;
 }
 
 .panel-visible
@@ -145,26 +146,6 @@ button.accordion:hover
     text-transform: uppercase;
     overflow: hidden;
     margin-top: 75px;
-}
-
-.txt-column-container
-{
-    height: 400px;
-}
-
-.txt-column-container-left
-{
-    background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,1));
-}
-
-.txt-column-container-right
-{
-    background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1));
-}
-
-.align-right
-{
-    float: right;
 }
 
 button.btn-more
@@ -1964,93 +1945,6 @@ div.image-upload
     top: 5px;
 }
 
-.banner-cumple
-{
-    position: relative;
-    top: 20px;
-    height: 400px;
-    margin-bottom: 3%;
-}
-
-.img-banner-cumple
-{
-    position: absolute;
-    top: 100px;
-}
-
-.txt-title-left
-{
-    position: absolute;
-    color: white;
-    max-width: 65%;
-    width: 100%;
-    text-align: left;
-    height: 120px;
-    overflow: hidden;
-    left: 3%;
-    top: 0;
-}
-
-.txt-subhead-left
-{
-    position: absolute;
-    color: white;
-    text-align: left;
-    max-width: 65%;
-    width: 100%;
-    max-height: 249px;
-    overflow: hidden;
-    left: 3%;
-    top: 33%;
-}
-
-.txt-title-right
-{
-    position: absolute;
-    color: white;
-    max-width: 65%;
-    width: 100%;
-    text-align: left;
-    height: 120px;
-    overflow: hidden;
-    right: 4%;
-    top: 0;
-}
-
-.txt-subhead-right
-{
-    position: absolute;
-    color: white;
-    text-align: left;
-    max-width: 65%;
-    width: 100%;
-    max-height: 249px;
-    overflow: hidden;
-    right: 3%;
-    top: 33%;
-}
-
-.bajada-cumple
-{
-    min-height: 100px;
-    margin-bottom: 5%;
-}
-
-.img-cumple-info
-{
-    object-fit: cover;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    padding: 0px;
-    z-index: -1;
-    filter: grayscale(0%) brightness(50%);
-    -webkit-filter: grayscale(0%) brightness(50%);
-    -moz-filter: grayscale(0%) brightness(50%);
-    -ms-filter: grayscale(0%) brightness(50%);
-    -o-filter: grayscale(0%) brightness(50%);
-}
 
 @media (min-width: 1200px)
 {
@@ -2197,14 +2091,6 @@ div.image-upload
     .align-right
     {
         float: inherit;
-    }
-
-    .banner-cumple
-    {
-        position: relative;
-        top: 20px;
-        height: 500px;
-        margin-bottom: 3%;
     }
 
     .txt-title-left
