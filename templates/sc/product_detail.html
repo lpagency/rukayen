@@ -12,17 +12,7 @@
 
 {% block javascript %}
         <script src="{{ site_base }}/{{ nocache_static }}/js/detalle-producto.js"></script>
-        <!-- <script type="text/javascript" src="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.js"></script> -->
-
         <script type="text/x-template" id = "product_template" > </script>
-
-        <!-- <script type="text/x-template" id="tag_template" >
-         <li>
-             <a href="/sample/tag.html?tag={{! id }}" >
-            {{!name}}
-            </a>
-         </li >
-         </script>-->
 
         <script type="text/javascript" >
 
@@ -36,37 +26,7 @@
                                 'https://pay.loadingplay.com',
                                 'https://pay.loadingplay.com');
 
-// <<<<<<< HEAD
-//             // configure for each enviroment
-//             if ( isLocalHost() )
-//             {
-//               // base_url = 'https://apibodegas.loadingplay.com/';
-//               // checkout_url = 'https://pay.loadingplay.com/';
-//               base_url = 'https://apibodegas.loadingplay.com/';
-//               checkout_url = 'https://pay.loadingplay.com/';
-//               app_public= 7;
-//             }
-//             else if ( isDevelopment() )
-//             {
-//               base_url = 'https://apibodegas.loadingplay.com/';
-//               checkout_url = 'https://pay.loadingplay.com/';
-//               app_public = 7;
-//             }
-//         $(document).ready(function()
-//         {
-//             $(document).ecommerce('product_detail', {
-//                 'app_public' : 7,
-//                 'products_per_page' : 6,
-//                 'ignore_stock': true,
-//                 'base_url' : base_url,
-//                 // 'base_url' : 'https://apibodegas.loadingplay.com/',
-//                 'checkout_url': checkout_url,
-//                 // 'checkout_url': 'https://pay.loadingplay.com',
-//                 'product_id' : {{ product_id }}
-//             });
-// =======
             var app_public = $.environmentVar('rukayen','rukayen','rukayen');
-// >>>>>>> beb533166c6fa42a3b62f7f9d6cacbe512758794
 
             $(document).ready(function()
             {
@@ -75,9 +35,7 @@
                     'products_per_page' : 6,
                     'ignore_stock': true,
                     'base_url' : base_url,
-                    // 'base_url' : 'https://apibodegas.loadingplay.com/',
                     'checkout_url': checkout_url,
-                    // 'checkout_url': 'https://pay.loadingplay.com',
                     'product_id' : {{ product_id }}
                 });
 
@@ -87,10 +45,8 @@
                     'products_per_page' : 6,
                     'ignore_stock': true,
                     'base_url' : base_url,
-                    // 'base_url' : 'https://apibodegas.loadingplay.com/',
                     'checkout_url': checkout_url,
                     'site_name': 'rukayen',
-                    // 'checkout_url': 'https://pay.loadingplay.com',
                     'product_id' : {{ product_id }}
                 });
 
@@ -115,15 +71,6 @@
                         <p style="font-size:19px;"> {{! bullet_1 }}</p>
                         <p>{{! description }}</p>
 
-<!--                         <div class="selectservice">
-                            <select>
-                                <option>TIPO DE SERVICO</option>
-                                <option>TIPO DE SERVICO</option>
-                                <option>TIPO DE SERVICO</option>
-                                <option>TIPO DE SERVICO</option>
-                                <option>TIPO DE SERVICO</option>
-                            </select>
-                        </div> -->
                         <p class="produc money">{{! main_price }}</p>
 
                         <div class="reserve space20">
