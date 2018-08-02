@@ -14,14 +14,14 @@
         <script src="{{ site_base }}/{{ nocache_static }}/js/detalle-producto.js"></script>
         <!-- <script type="text/javascript" src="{{ site_base }}/common/js/bower/bodegas.client/dist/bodegas.client.js"></script> -->
 
-        <script type="text/x-template" id = "product_template" > </script> 
+        <script type="text/x-template" id = "product_template" > </script>
 
-        <!-- <script type="text/x-template" id="tag_template" > 
-         <li> 
-             <a href="/sample/tag.html?tag={{! id }}" > 
-            {{!name}} 
+        <!-- <script type="text/x-template" id="tag_template" >
+         <li>
+             <a href="/sample/tag.html?tag={{! id }}" >
+            {{!name}}
             </a>
-         </li > 
+         </li >
          </script>-->
 
         <script type="text/javascript" >
@@ -38,21 +38,21 @@
 
 // <<<<<<< HEAD
 //             // configure for each enviroment
-//             if ( isLocalHost() ) 
+//             if ( isLocalHost() )
 //             {
 //               // base_url = 'https://apibodegas.loadingplay.com/';
 //               // checkout_url = 'https://pay.loadingplay.com/';
 //               base_url = 'https://apibodegas.loadingplay.com/';
 //               checkout_url = 'https://pay.loadingplay.com/';
 //               app_public= 7;
-//             } 
-//             else if ( isDevelopment() ) 
+//             }
+//             else if ( isDevelopment() )
 //             {
 //               base_url = 'https://apibodegas.loadingplay.com/';
 //               checkout_url = 'https://pay.loadingplay.com/';
 //               app_public = 7;
 //             }
-//         $(document).ready(function() 
+//         $(document).ready(function()
 //         {
 //             $(document).ecommerce('product_detail', {
 //                 'app_public' : 7,
@@ -65,10 +65,10 @@
 //                 'product_id' : {{ product_id }}
 //             });
 // =======
-            var app_public = $.environmentVar(8,8,8);
+            var app_public = $.environmentVar('rukayen','rukayen','rukayen');
 // >>>>>>> beb533166c6fa42a3b62f7f9d6cacbe512758794
 
-            $(document).ready(function() 
+            $(document).ready(function()
             {
                 $(document).ecommerce('product_detail', {
                     'app_public' : app_public,
@@ -105,8 +105,8 @@
                 <div class="col-md-7">
                     <div class="item-img ">
                         <img src="https://static.loadingplay.com/static/images/1_eb1852c1e13bb1087f187b579784f778_maxresdefault.png" class="product-image img-edit image img-responsive" alt="item">
-                     
-                    </div>  
+
+                    </div>
                 </div>
 
                 <div class="col-md-5">
@@ -127,10 +127,10 @@
                         <p class="produc money">{{! main_price }}</p>
 
                         <div class="reserve space20">
-                            <button 
-                                product-id="{{! id }}" 
-                                product-name="{{! name }}" 
-                                product-price="{{! main_price }}" 
+                            <button
+                                product-id="{{! id }}"
+                                product-name="{{! name }}"
+                                product-price="{{! main_price }}"
                                 product-upp="{{! upp }}"
                                 type="button"
                                 id="open-cart"
@@ -143,7 +143,7 @@
                                 COMPRAR
                                 <i class="fa fa-arrow-circle-right"></i>
                             </button>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -162,13 +162,13 @@
                                             <li role="presentation" class="{{! bullet_2|hide_if_empty }} active f600"><a href="#vanila" aria-controls="vanila" role="tab" data-toggle="tab">Qué incluye el cumpleaños</a></li>
                                             <li role="presentation" class="{{! bullet_3|hide_if_empty }} f600"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Términos y políticas de cumpleaños </a></li>
                                         </ul>
-                                    </div>  
+                                    </div>
                             </div><!-- end tab head -->
 
                             <div class="container2">
                                           <!-- Tab panes -->
                                 <div class="tab-content">
-                                     <div role="tabpanel" class="tab-pane fade in active" id="vanila"> 
+                                     <div role="tabpanel" class="tab-pane fade in active" id="vanila">
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <p class="space20">
@@ -180,7 +180,7 @@
 
                                     <div role="tabpanel" class="tab-pane fade" id="profile">
                                         <div class="row">
-                                        
+
                                             <div class="col-md-12">
                                                 <p class="space20">
                                                         {{! bullet_3 }}
@@ -223,7 +223,7 @@
     {% end %}
     <img id="{{ site.name }}_banner_detalle" src="{{ read_image(site.name + '_banner_detalle', 1) }}" onload="this.onload='';this.src='{{ read_image(site.name + '_banner_detalle',500) }}'" class="img-responsive b-detail" alt="item" style="height: 100%;">
 
-    
+
     <div class="container2">
         <div class="row">
             <div class="space-menos"></div>
@@ -272,6 +272,6 @@
         </div>
     </div>
 </div>
-        
+
 {% include '../home/footer.html' %}
 {% end %}
